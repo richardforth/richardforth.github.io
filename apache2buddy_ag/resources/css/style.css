@@ -46,6 +46,142 @@ header {
     
 }
 
+/* -------------------------- */
+/* main-navigation */
+/* -------------------------- */
+
+
+nav {
+    display:block;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px dotted #555;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    background-color: #222;
+    color: #787878;
+    z-index: 9999;
+}
+
+
+.logo-top {
+    float: left;
+    padding: 5px;
+    margin: 0;
+    padding-left: 15px;
+    color: #909090;
+    font-size: 35px;
+}
+
+.navbar {
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 525px;
+    height: 100%;
+}
+
+.nav-icon {
+    display: block;
+    padding: 10px;
+    float: right;
+}
+
+.main-nav {
+    display: block;
+    float: left;
+    margin-top: 12px; 
+    margin-right: 0;
+    list-style: none;
+    width: auto;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 0px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+    
+}
+
+
+
+.more-posts {
+    display: inline;
+}
+
+.more-posts li a:link,
+.more-posts li a:visited,
+.more-posts li a:hover{
+    color: #fff;
+}
+
+/* -------------------------- */
+/* Side-Nav  */
+/* -------------------------- */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav ul,
+.sidenav ul li a {
+    list-style: none;
+    padding: 5px ;
+    text-decoration: none;
+    font-size: 16px;
+    font-family:  "Special Elite", "Arial", sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.closebtn {
+    list-style: none;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 400px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 .head-text-box {
     
     position: absolute;

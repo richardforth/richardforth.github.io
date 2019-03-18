@@ -1,0 +1,284 @@
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-family: "Lato", "Arial", sans-serif;
+    
+}
+
+ul li {
+    color:#6776b5;
+    list-style-type: circle;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+}
+
+ul {
+    padding-bottom: 20px;
+    margin-left: 7%;
+    margin-top: 0px;
+}
+header {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/azoom.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    
+}
+
+.clearscroll {
+    padding-top: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/azoom.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 35vh;
+    
+}
+
+.head-text-box {
+    
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    top: 10%;
+    left: 10%;
+    
+}
+
+header h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 340%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.subheading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 120%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    float: left;
+}
+
+.author {
+    position: absolute;
+    right: 10%;
+    bottom: 0
+}
+
+.history,
+.shortcomings {
+    
+    color: #555;
+    background-color: #fff;
+    
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 10%;
+    top: 10px;
+    width: 90%;
+    color: #000;
+    font-size: 150%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h3 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 10%;
+    width: 90%;
+    color: #000;
+    font-size: 100%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h4 {
+    text-transform: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 10%;
+    width: 90%;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 90%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.intro h4,
+.bestpractice h4{
+
+    font-size: 180%;
+}
+
+.references,
+.main-text {
+    
+    padding-top: 0px;
+    padding-bottom: 50px;
+    position: relative;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    
+}
+
+div[id*="biblio"] {
+    
+    font-size:65%;
+    left: 10%;
+    width: 80%;
+    line-height: 100%
+    
+}
+
+.backtop {
+    text-align: right;
+    padding-bottom: 20px
+}
+
+div[class*="biblio"] a {
+    
+    font-size:100%;
+}
+
+.codeblock {
+    white-space:pre;
+    word-wrap: normal;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #726a5f;
+    background-color: #000;
+    color: chartreuse;
+    width: 70%;
+    font-size: 60%;
+    font-family: courier;
+    padding: 10px;
+    position: relative;
+    left: 15%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+    
+}
+
+.factblock {
+    white-space: pre;
+    word-wrap: break-word;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #726a5f;
+    background-color: #cecfdd;
+    width: 70%;
+    font-size: 60%;
+    font-family: courier;
+    padding: 10px;
+    position: relative;
+    left: 15%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+    
+}
+
+.copyrightnotice {
+    white-space: pre;
+    word-wrap: break-word;
+    border-style:double;
+    border-width: 2px;
+    border-color: #fd010b;
+    background-color: #ccc;
+    width: 90%;
+    font-size: 60%;
+    font-family: courier;
+    padding: 15px;
+    position: relative;
+    left: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+    
+}
+
+.copyleft {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding-bottom: 0px;
+}
+
+.figtext{
+    width: 70%;
+    font-size: 80%;
+    font-family: sans-serif;
+    font-weight:bolder;
+    padding-top:0px;
+    padding-bottom: 30px;
+    position: relative;
+    left: 15%;
+}
+
+
+em {
+    font-weight: bolder;
+    font-
+}
+.codeblock mark {
+    color: #ff0000;
+    font-size: 80%;
+    font-family: courier;
+}
+
+footer {
+    background-color: darkgray;
+    height: 600px;
+}
+
+/*alternate section backgrounds to distinguish sections */
+.history,
+.improvements,
+.support,
+.bestpractice,
+.reportingissues {
+    background-color: #d9d8d8
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

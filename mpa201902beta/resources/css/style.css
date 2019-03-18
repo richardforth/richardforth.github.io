@@ -1,0 +1,300 @@
+/*
+
+main-color: #009688; teal
+secondary-color: #ff0000; red
+tertiary-color: #eaf9f7; # light-teal
+
+*/
+
+/* ------------------------------------------------ */
+/* basic setup */
+/* ------------------------------------------------ */
+
+/* here we apply styles to ALL elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* here we try not to duplicate css code by grouping common styles together */
+body {
+    font-family: "Lato", Helvetica Neue, Arial;
+    font-size: 18px;
+    position: relative;
+    /* temp for formatting debugging */
+    background-color: #fff;
+}
+/* again h1 and h2 share the same color style , so we grouped them here*/
+
+
+/* --- use this clearfix class to clear the floats -- */
+.clearfix { zoom: 1 }
+.clearfix:after {
+    content: '.';
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display:block;
+}
+
+/* ------------------------------------------------ */
+/* resuable / global elements */
+/* ------------------------------------------------ */
+
+h2 {
+    font-weight: 400;
+/*    text-transform: uppercase;*/
+    padding-bottom: 40px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 30px;
+}
+
+section {
+    height: 300px
+}
+
+.row {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.main-text{
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/* ------------------------------------------------ */
+/* header */
+/* ------------------------------------------------ */
+
+header {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    position: relative;
+    
+    
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 60%;
+    text-align: left;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 250%;
+    font-weight: 300;
+}
+
+nav {
+    display: block;
+    background-color: rgba(0, 150, 136, 0.45);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    float:left;
+    margin-top: 5px;
+    margin-left: 20px
+}
+
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 15px;
+    margin-right: 50px;
+    color: #fff;
+}
+
+
+
+/* Main navi */
+.main-nav li {
+    display: inline;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #eaf9f7;
+    
+}
+
+/* ------------------------------------------------ */
+/* welcome */
+/* ------------------------------------------------ */
+
+.section-welcome {
+    background-color: #eaf9f7;
+}
+
+
+/* ------------------------------------------------ */
+/* about */
+/* ------------------------------------------------ */
+
+.section-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 600px;
+}
+
+.section-about p:last-child {
+    padding-top: 400px;
+}
+
+/* ------------------------------------------------ */
+/* opening */
+/* ------------------------------------------------ */
+
+.section-opening {
+    background-color: #eaf9f7;
+}
+
+
+/* ------------------------------------------------ */
+/* services */
+/* ------------------------------------------------ */
+
+.section-services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/services.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 700px;
+}
+
+.service-box {
+    background-color: rgba(234, 249, 247, 0.38);
+    height: 250px;
+    width: 200pxx;
+    border-radius: 15%;
+    color: #07f2dc;
+    box-shadow: 5px 5px #555;
+}
+
+.service-box h3 {
+    color: #ffb0b0;
+    font-style: normal;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.service-text{
+    padding: 10px;
+}
+
+
+
+/* ------------------------------------------------ */
+/* estmates */
+/* ------------------------------------------------ */
+
+.section-estimates {
+    background-color: #eaf9f7;
+}
+
+
+/* ------------------------------------------------ */
+/* collect and return (c.a.r.) */
+/* ------------------------------------------------ */
+
+.section-car {
+    background-color: #fff;
+}
+
+/* ------------------------------------------------ */
+/* courtesy */
+/* ------------------------------------------------ */
+
+.section-courtesy {
+    background-color: #eaf9f7;
+}
+
+
+/* ------------------------------------------------ */
+/* contact */
+/* ------------------------------------------------ */
+
+.section-contact {
+    background-color: #fff;
+    height: 400px;
+}
+
+.post-box {
+    display: block;
+    white-space:pre;
+    width: 350px;
+    height: auto;
+    margin-right: 65px;
+}
+
+.post-box h3 {
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.form-box {
+    display: block;
+    width: 700px;
+    height: auto;
+}
+
+.form-box textarea {
+    width: 300px;
+    height: 200px;
+}
+
+/* ------------------------------------------------ */
+/* copyright */
+/* ------------------------------------------------ */
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.copyright-notice,
+.powered-by-notice,
+.design-by-notice {
+    text-align: center;
+    padding: 5px
+}

@@ -8,21 +8,24 @@
     
 }
 
-ul li {
-    color:#6776b5;
+.section-goals ul li,
+.section-support ul li,
+.section-improvements ul li {
+    color:#73798e;
     list-style-type: circle;
     padding-top: 0px;
     padding-bottom: 0px;
     position: relative;
-    left: 10%;
+    left: 45px;
     right: 10%;
     width: 80%;
 }
 
-ul {
+.section-goals ul,
+.section-support ul,
+.section-improvements ul  {
     padding-bottom: 20px;
-    margin-left: 7%;
-    margin-top: 0px;
+    padding-top: 20px;
 }
 header {
     
@@ -142,14 +145,16 @@ nav {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding: 60px 5px;
 }
 
 .sidenav ul,
+.sidenav ul li,
 .sidenav ul li a {
-    list-style: none;
-    padding: 5px ;
-    text-decoration: none;
+    list-style-type: none ! important; 
+    list-style: none ! important;
+    padding: 2px ! important;
+    text-decoration: none ! important ;
     font-size: 16px;
     font-family:  "Special Elite", "Arial", sans-serif;
     color: #818181;

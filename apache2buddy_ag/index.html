@@ -57,7 +57,7 @@
             <div class="head-text-box" id="top">
                 <h1>apache2buddy.pl</h1>
                 <p class="subheading">Administrator's Guide.</p>
-                <p class="author">Richard A. Forth<br><strong>Last Updated:</strong> <em>March 13th, 2019</em></p>
+                <p class="author">Richard A. Forth<br><strong>Last Updated:</strong> <em>April 6t, 2019</em></p>
             </div>
         </header>
         <section class="section-intro js--section-intro">
@@ -326,41 +326,40 @@ Settings considered for this report:
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="improvements">
+        <section class="section-improvements">
             <a id="improvements"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>A high - level summary of the key improvements to apache2buddy.pl</h2>
             </div>
-            <p class="main-text">
-              
-                <ul>
-                    <li>Added support for Scientific Linux systems.</li>
-                    <li>Added support for CentOS systems.</li>
-                    <li>Added support for Debian systems.</li>
-                    <li>Added support for Ubuntu systems.</li>
-                    <li>Added support for SuSE systems. (thanks to psytester)<sup>[ reference needed ]</sup></li>
-                    <li>Takes into account other services' memory usage.
-                        <ul>
-                            <li>Java</li>
-                            <li>MySQL / MariaDB / Percona</li>
-                            <li>Gluster</li>
-                            <li>Redis</li>
-                            <li>Varnish</li>
-                            <li>PHP-FPM</li>
-                        </ul>
-                        
-                    </li>
-                    <li>Maxclients/MaxRequestWorkers is calculated on <em>remaining</em> RAM, <strong>not</strong> <em>total installed</em> RAM.</li>
-                    <li>Has capability to detect cPanel, webmin and Plesk (critical to alert administrators that they probably should'nt be tweaking config files manually, or at least be extra careful).</li>
-                    <li>Checks for, and reports available/pending php and apache package updates.</li>
-                    <li>Checks log files for PHP Fatal Errors.</li>
-                    <li>Creates, or appends to a log file in /var/log, for historical review.</li>
-                    <li>Detects PHP-FPM and recommends an alternative tuning script<sup>[ reference needed ]</sup>.</li>
-                </ul>
-                     
-                
-            </p>
+            <div class="row">
+                <div class="main-text">
+                    <ul>
+                        <li>Added support for Scientific Linux systems.</li>
+                        <li>Added support for CentOS systems.</li>
+                        <li>Added support for Debian systems.</li>
+                        <li>Added support for Ubuntu systems.</li>
+                        <li>Added support for SuSE systems. (thanks to psytester)<sup>[ reference needed ]</sup></li>
+                        <li>Takes into account other services' memory usage.
+                            <ul>
+                                <li>Java</li>
+                                <li>MySQL / MariaDB / Percona</li>
+                                <li>Gluster</li>
+                                <li>Redis</li>
+                                <li>Varnish</li>
+                                <li>PHP-FPM</li>
+                            </ul>
+                        </li>
+                        <li>Maxclients/MaxRequestWorkers is calculated on <em>remaining</em> RAM, <strong>not</strong> <em>total installed</em> RAM.</li>
+                        <li>Has capability to detect cPanel, webmin and Plesk (critical to alert administrators that they probably should'nt be tweaking config files manually, or at least be extra careful).</li>
+                        <li>Checks for, and reports available/pending php and apache package updates.</li>
+                        <li>Checks log files for PHP Fatal Errors.</li>
+                        <li>Creates, or appends to a log file in /var/log, for historical review.</li>
+                        <li>Detects PHP-FPM and recommends an alternative tuning script<sup>[ reference needed ]</sup>.</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
@@ -381,7 +380,7 @@ Settings considered for this report:
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="support">
+        <section class="section-support">
             <p style="page-break-before: always"></p>
             <h2>Supported Operating Systems</h2>
             <p class="main-text">These are the operating systems that are OFFICIALLY supported.</p>
@@ -751,7 +750,7 @@ Last 5 entries:
         </footer>
         <script>
             function openNav() {
-                document.getElementById("mySidenav").style.width = "450px";
+                document.getElementById("mySidenav").style.width = "275px";
             }
 
             function closeNav() {

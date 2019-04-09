@@ -34,14 +34,17 @@
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <ul>
                             <li><a href="#" onclick="closeNav()">Back to top</a></li>
-                            <li><FONT COLOR="YELLOW">* MENU UNDER CONSTRUCTION *</FONT></li>
                             <li><a href="pl/index.html" onclick="closeNav()">Język polski (Polish Language)</a></li>
                             <li><a href="#section-intro" onclick="closeNav()">Introduction</a></li>
+                            <li><a href="#goals" onclick="closeNav()">Goals</a></li>
                             <li><a href="#origins" onclick="closeNav()">Origins</a></li>
                             <li><a href="#polish" onclick="closeNav()">What's with the Polish domain?</a></li>
                             <li><a href="#intro" onclick="closeNav()">Introduction to apache2buddy.pl</a></li>
                             <li><a href="#shortcomings" onclick="closeNav()">Shortcomings of the original</a></li>
                             <li><a href="#improvements" onclick="closeNav()">Improvements in apache2buddy.pl</a></li>
+                            <li><a href="#publicity" onclick="closeNav()">Publicity</a></li>
+                            <li><a href="#os-support" onclick="closeNav()">Supported Operating Systems</a></li>
+                            <li><a href="#os-unsupport" onclick="closeNav()">Un-Supported Operating Systems (what to do)</a></li>
                             <li><a href="#usecases" onclick="closeNav()">Use cases</a></li>
                             <li><a href="#known-issues" onclick="closeNav()">Known issues</a></li>
                             <li><a href="#references" onclick="closeNav()">References</a></li>
@@ -57,7 +60,7 @@
             <div class="head-text-box" id="top">
                 <h1>apache2buddy.pl</h1>
                 <p class="subheading">Administrator's Guide.</p>
-                <p class="author">Richard A. Forth<br><strong>Last Updated:</strong> <em>April 6th, 2019</em></p>
+                <p class="author">Richard A. Forth<br><strong>Last Updated:</strong> <em>April 9th, 2019</em></p>
             </div>
         </header>
         <section class="section-intro js--section-intro">
@@ -365,6 +368,7 @@ Settings considered for this report:
             </div>
         </section>
         <section class="publicity">
+            <a id="publicity"></a>
             <p style="page-break-before: always"></p>
             <h2>Unprompted (but welcome) publicity received for apache2buddy.pl.</h2>
             <p class="main-text">
@@ -381,32 +385,58 @@ Settings considered for this report:
             </div>
         </section>
         <section class="section-support">
+            <a id="os-support"></a>
             <p style="page-break-before: always"></p>
-            <h2>Supported Operating Systems</h2>
-            <p class="main-text">These are the operating systems that are OFFICIALLY supported.</p>
-            <ul>
-                <li>Red Hat Enterprise Linux.</li>
-                <li>CentOS.</li>
-                <li>Scientific Linux.</li>
-                <li>Debian.</li>
-                <li>Ubuntu.</li>   
-            </ul>
-            <p class="main-text">Note that it may run just fine on others, but that would be a fluke and not by any design. Support follows as much as possible, the original OS lifecycle dates (ie, when the vendor EOLs the OS, I remove it from apache2buddy support. The script will NOT run on EOL systems.</p>
-            <p class="main-text">But, I hear you say, what if I have a business need to run old cruddy hardware and unpatched systems? Or what if my OS isn't supported by apache2buddy.pl? How can I force it to run?.</p>
-            <p class="main-text"><em>Come with me my friend, for the answers you seek lay just ahead...</em></p>
+            <div class="row">
+                <h2>Supported Operating Systems</h2>
+            </div>
+            <div class="row">
+                <div class="main-text">These are the operating systems that are OFFICIALLY supported.
+                <ul>
+                    <li>Red Hat Enterprise Linux.</li>
+                    <li>CentOS.</li>
+                    <li>Scientific Linux.</li>
+                    <li>Debian.</li>
+                    <li>Ubuntu.</li>   
+                </ul>
+            </div>
+            <div class="main-text">
+                Note that it may run just fine on others, but that would be a fluke and not by any design. Support follows as much as possible, the original OS lifecycle dates (ie, when the vendor EOLs the OS, I remove it from apache2buddy support. The script will NOT run on EOL systems.
+            </div>
+            <div class="main-text">
+                But, I hear you say, what if I have a business need to run old cruddy hardware and unpatched systems? Or what if my OS isn't supported by apache2buddy.pl? How can I force it to run?
+            </div>
+            <div class="main-text">
+                <em>Come with me my friend, for the answers you seek lay just ahead...</em>
+            </div>
+            </div>
+            
+            
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="unsupport">
+        <section class="section-unsupport">
             <p style="page-break-before: always"></p>
-            <h2>What do I do if my OS isnt listed under "Supported Operating Systems"?</h2>
-            <p class="main-text">Welome to the world of Free and Open Souce Software (FOSS). I have had many requests to add support for other operating systems, and the answer has always been no, and it always will be.</p>
-            <p class="main-text">But, I am not a monster. Here are some high-level suggestions on how I would recommend you proceed. We can deep dive into each option as required:</p>
-            <ul>
-                <li>Fork the project on github. Make your own custom changes to the script.</li>
-                <li>Download or git-clone the repo locally and just do a one-time edit to make it run.</li>
-            </ul>
+            <a id="os-unsupport"></a>
+            <div class="row">
+                <h2>What do I do if my OS isnt listed under "Supported Operating Systems"?</h2>
+            </div>            
+            <div class="row">
+                <div class="main-text">
+                    Welome to the world of Free and Open Souce Software (FOSS). I have had many requests to add support for other operating systems, and the answer has always been no, and it always will be.
+                </div>
+                <div class="main-text">
+                    But, I am not a monster. Here are some high-level suggestions on how I would recommend you proceed. We can deep dive into each option as required:
+                    <ul>
+                        <li>Fork the project on github. Make your own custom changes to the script.</li>
+                        <li>Download or git-clone the repo locally and just do a one-time edit to make it run.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
             <p class="main-text">At the end of the day, I can only do so much testing, and I chose, for my own sanity, to only support the big four OSes, Debian, and its most famous branch-off - Ubuntu, and of course RHEL, and the two other major distros based on that CentOS and Scientific.</p>
             <p class="main-text">I have never prevented anyone from hacking their own private version of the script, so long as they adhere to the spirit of the Apache 2.0 License.</p>
             <p class="main-text">So lets go on a journey of discovery as I walk you through a fictional scenario: we are going to fudge apache2buddy to run on an unsupported OS Version.</p>
@@ -420,7 +450,7 @@ Settings considered for this report:
             <p class="figtext">Fig 8: Saving the script locally with wget.</p>
             <p class="main-text">Before we proceed further, I do want to talk a bit about editors. Honestly its up to you what editor you use, if it's nano, a small kitten dies so lets avoid that, just kidding. I recommend that you use an editor that allows you to quickly and easily identify line numbers, and it must be a command-line editor (the assumption here is your production servers arent running a GUI (though seriously one time I found a rackmounted server running X windows and gnome-screensaver....take as long as you need on that one...</p>
             <p class="main-text">Anyway the point I am getting at is that in these examples I will be walking you through the edits with vi/vim, and using line numbers that made sense as of this writing, but as you know time stands still for no man and, well, line numbers may not be the same in a few years time. Its still an active project.</p>
-            <p class="main-text">So if I say, on line 80 change this value to that value, and the line i am quoting loks nothing like the line 80 youre working on, have a look in that general area of the code, as things get added or removed, teh code I may have been referring to may not be on line 80 any more, but it won't have drifted too far I would'nt have thought. Use your noggin before you complain.</p>
+            <p class="main-text">So if I say, on line 80 change this value to that value, and the line i am quoting loks nothing like the line 80 youre working on, have a look in that general area of the code, as things get added or removed, the code I may have been referring to may not be on line 80 any more, but it won't have drifted too far I would'nt have thought. Use your noggin before you complain.</p>
             <p class="main-text">So, if you havent already, make sure you have the following in your <strong>.vimrc</strong> file in root's home as a minimum:</p>
             <p class="codeblock">set number</p>
             <p class="figtext">Fig 9: Setting line numbers in vim using a runtime config file /root/.vimrc</p>
@@ -659,7 +689,7 @@ Last 5 entries:
         <div class="no-print">
             <div class="clearscroll"></div>
         </div>
-        <section class="section-known-issues">
+        <section class="section-knownissues">
             <a id="known-issues"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>

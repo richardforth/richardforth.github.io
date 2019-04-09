@@ -5,9 +5,14 @@
     box-sizing: border-box;
     font-size: 22px;
     font-family: "Lato", "Arial", sans-serif;
+    scroll-behavior: smooth;
     
 }
 
+.section-knownissues ul li,
+.section-usecases ul li,
+.section-support ul li,
+.section-unsupport ul li,
 .section-goals ul li,
 .section-support ul li,
 .section-improvements ul li {
@@ -21,8 +26,11 @@
     width: 80%;
 }
 
+.section-knownissues ul,
+.section-usecases ul,
 .section-goals ul,
 .section-support ul,
+.section-unsupport ul,
 .section-improvements ul  {
     padding-bottom: 20px;
     padding-top: 20px;
@@ -71,7 +79,7 @@ nav {
 .logo-top {
     float: left;
     padding: 5px;
-    margin: 0;
+    margin: 10px;
     padding-left: 15px;
     color: #909090;
     font-size: 35px;
@@ -89,6 +97,7 @@ nav {
 .nav-icon {
     display: block;
     padding: 10px;
+    margin-right: 10px;
     float: right;
 }
 
@@ -198,6 +207,7 @@ nav {
 }
 
 header h1 {
+    padding-top: 0px ! important;
     margin-top: 0px;
     margin-bottom: 10px;
     color: #fff;
@@ -233,6 +243,7 @@ header h1 {
 }
 
 h2 {
+    padding-top: 55px;
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -408,9 +419,10 @@ footer {
 }
 
 /*alternate section backgrounds to distinguish sections */
+.intro,
 .history,
-.improvements,
-.support,
+.section-improvements,
+.section-support,
 .bestpractice,
 .reportingissues {
     background-color: #d9d8d8

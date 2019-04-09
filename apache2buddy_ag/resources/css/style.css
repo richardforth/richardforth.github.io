@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-size: 22px;
     font-family: "Lato", "Arial", sans-serif;
-    scroll-behavior: smooth;
+/*    scroll-behavior: smooth;*/
     
 }
 
@@ -76,13 +76,18 @@ nav {
 }
 
 
-.logo-top {
+.logo-top,
+.logo {
     float: left;
-    padding: 5px;
-    margin: 10px;
+    padding: 3px;
     padding-left: 15px;
     color: #909090;
     font-size: 35px;
+    text-decoration: none;
+}
+
+.gtrans {
+    display: inline-block;
 }
 
 .navbar {
@@ -405,7 +410,6 @@ div[class*="biblio"] a {
 
 em {
     font-weight: bolder;
-    font-
 }
 .codeblock mark {
     color: #ff0000;
@@ -434,4 +438,22 @@ footer {
     {
         display: none !important;
     }
+}
+
+/**********************************
+* COOKIES
+*/
+
+.section-cookies {
+    background-color: beige;
+}
+
+.long-copy-cookie {
+    padding-top: 0px;
+    padding-bottom: 50px;
+    position: relative;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    color: darkgoldenrod
 }

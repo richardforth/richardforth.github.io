@@ -4,8 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>apache2buddy.pl Administrators Guide.</title>
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -15,7 +14,7 @@
         <header>
             <nav>
                 <div class="logo">
-                    <h1 class="logo-top">Apache2Buddy.pl</h1>
+                    <h1 class="logo-top"><a href="#" class="logo skiptranslate">Apache2Buddy.pl</a></h1>
                 </div>
                 <div class="navbar">
                     <ul class="main-nav">
@@ -23,18 +22,12 @@
                         <li><a href="#goals">Goals</a></li>
                         <li><a href="#origins">Origins</a></li>
                         <li><a href="#known-issues">Known issues</a></li>
-<!--
-                        <div class="more-posts" onclick="openNav()">
-                            <li><a>MORE POSTS...</a></li>
-                        </div>
--->
                     </ul>
                     
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <ul>
                             <li><a href="#" onclick="closeNav()">Back to top</a></li>
-                            <li><a href="pl/index.html" onclick="closeNav()">Język polski (Polish Language)</a></li>
                             <li><a href="#section-intro" onclick="closeNav()">Introduction</a></li>
                             <li><a href="#goals" onclick="closeNav()">Goals</a></li>
                             <li><a href="#origins" onclick="closeNav()">Origins</a></li>
@@ -51,13 +44,19 @@
                             <hr>
                             <li><a href="#cookies" onclick="closeNav()">Cookies on this site</a></li>
                         </ul>
+                        <p>Translate this page:</p>
+                        <span id="google_translate_element" class="gtrans"></span>
+
+                        <!-- 
+
+                        -->
                     </div>
                     <div class="nav-icon">
                         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                     </div>
                 </div>
 		  </nav>
-            <div class="head-text-box" id="top">
+            <div class="head-text-box skiptranslate" id="top">
                 <h1>apache2buddy.pl</h1>
                 <p class="subheading">Administrator's Guide.</p>
                 <p class="author">Richard A. Forth<br><strong>Last Updated:</strong> <em>April 9th, 2019</em></p>
@@ -161,7 +160,7 @@
                 <p class="main-text">
                     In apachebuddy.pl's hey-day, Red Hat Enterprise Linux (RHEL) was the <em>only</em> available operating system we sold / supported on the Linux support floor, so of course it made sense to code apachebuddy.pl accordingly, this may go some way to explain the difference in the size of the code base of apachebuddy.pl when we compare it with apache2buddy.pl (see Fig 1), since it was only written to cater to RHEL systems:
                 </p>
-                <div class="factblock">apachebuddy.pl
+                <div class="factblock skiptranslate">apachebuddy.pl
 1102 lines of perl code
 last commit: 5 years ago.*
 ----------------------------------------------------------
@@ -186,7 +185,7 @@ last commit: 8 days ago.*
                 <p class="main-text">
                     The idea behind the domain pointing at the raw code was to allow one to run <strong>apachebuddy.pl</strong> through a commandline process known as "curl and perl", where you curl the domain and pipe it into perl (see Fig 2):
                 </p>
-                <p class="codeblock"  id="fig2">
+                <p class="codeblock skiptranslate"  id="fig2">
                     # curl -sL apachebuddy.pl | perl
                 </p>
                 <div class="figtext">
@@ -227,17 +226,17 @@ last commit: 8 days ago.*
             <p class="main-text">I asked him if he didnt mind if I took a copy of it and forked it into a new project, to see what I could do to solve the problems with it not running on Debian or Ubuntu Systems.</p>
             <p class="main-text">I say "fork" here loosely, as at that time I had no github/git training or knowledge, so I copied the code into a vim editor and originally hosted the apache2buddy project and its associated domain on a LAMP server running in the cloud. I editted the file manually eacg tiime it needed updating, and had no change control or proper backups in place.</p>
             <p class="main-text">This, as you can imagine, wasnt very easy to maintain, but, over time I grew to learn and adopt git/github repositories and learnt how to commit changes, slowly over time I migrated away from a LAMP server to hosting the code on my own github repository:</p>
-            <div class="factblock">https://github.com/richardforth/apache2buddy</div>
+            <div class="factblock skiptranslate">https://github.com/richardforth/apache2buddy</div>
             <p class="figtext">Fig 4: The home of apache2buddy.pl</p>
             <p class="main-text">Originally I had the domain <strong>apache2buddy.pl</strong> pointed to the <a href="https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl" target="_blank">raw code</a>, just like Will did with the original <strong>apachebuddy.pl</strong>domain (see <a href="#fig5">curl and perl method</a>).</p>
             <p class="main-text">However I got itchy feet and a tick in my face whenever I gave any thought to the fact that the <a href="#fig5">curl and perl method</a> was open to malicious bad actors typocamping/typosquatting <sup>[<a href="#biblio2">2</a>][<a href="#biblio3">3</a>]</sup> on slightly mispelled domains. It kept me up at night that this also had to be done as root, on systems globally. Even though I knew I wasn't really responsible for end users doing something silly like curling and mistyping a domain name, and then piping that into perl, as root (and enabling some bad actor which maybe registered a mis-spelt version of the apache2buddy.pl domain in the hope they catch a fish with a malicious root compromise perl script or bitcoin miner or something equally unwelcome).</p>
             <p class="main-text">So to that end I pointed the domain away from the code and forced people who still wished to curl and perl, use the whole complete github path to the raw code, since it was much more difficult to land in hot water due to a mistyped URL:
-            <div class="codeblock"  id="fig5"># curl -sL apache2buddy.pl | perl</div>
+            <div class="codeblock skiptranslate"  id="fig5"># curl -sL apache2buddy.pl | perl</div>
             <p class="figtext">Fig5: The curl and perl method we ran originally. This no longer works, you will get errors.</p>
-            <div class="codeblock"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl</div>
+            <div class="codeblock skiptranslate"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl</div>
             <p class="figtext">Fig 6: The curl and perl method we run today.</p>
             <p class="main-text">While the first example looks more aesthetically pleasing to the eye, and is easy to remember, as commands go, it was vulnerable to a typosquatting attack, consider the following BAD command (trigger warning - I have no idea if that domain is registered and if it has a malicious perl code behind it - it's just an example to illustrate what I mean by typo-squatting attacks).
-            <div class="codeblock"># curl -sL apache2budddy.pl | perl</div>
+            <div class="codeblock skiptranslate"># curl -sL apache2buddy.pl | perl</div>
             <p class="figtext">Fig 7: An example of a mistyped domain in a command that could run other, potentially arbitraryor malicious perl code (as root).</p>
             <p class="main-text">Did you notice in Figure 7 that there were three d's in this last example? Suppose someone wrote a bad perl script and you mistyped the domain as above.... well, through your own fat, sausage fingers, you now <em>potentiially</em> aided in a third party root compromising your server. Slow clap...</p>
             <p class="main-text">Though I could never take responsibility for your own faux pas, I decided to no longer support using the domain name as part of the curl and perl technique as a saftey precaution, and so repointed it  - originally to a blog, then to this page (you get some random perl errors because perl would try to parse HTML).</p>
@@ -256,7 +255,7 @@ last commit: 8 days ago.*
             <p class="main-text">The original <strong>apachebuddy.pl</strong> had a couple of major shortcomings. Firstly it only ever gave you a calculation of Maxclients/MaxRequestWorkers based on total installed RAM and <em>not</em> taking into consideration any running services that consume RAM.</p>
             <p class="main-text">Secondly, but more pressingly at the time, the main issue was that <strong>apachebuddy.pl</strong> only worked on Red Hat Enterprise Linux systems, it didn't run on Ubuntu or Debian systems* which came into support at Rackspace around 5 years ago, a solution had to be found.</p>
             <p class="main-text"><em>* I beleive it does now, but it is not maintained, and hasnt been committed to in over 5 years, and can be hit and miss.</em></p>
-            <div class="codeblock">[root@web1 ~]# curl -sL apachebuddy.pl | perl
+            <div class="codeblock skiptranslate">[root@web1 ~]# curl -sL apachebuddy.pl | perl
 ########################################################################
 # Apache Buddy v 0.3 ###################################################
 ########################################################################
@@ -269,7 +268,7 @@ Could not find Apache process. Exiting...
             </div>
             <p class="figtext">Fig3: The original and unmaintained apachebuddy.pl script output, not to be confused with apache2buddy.pl. It doesnt like CentOS 7  / apache 2.4 it seems.</p>
             <p class="main-text">That demo using CentOS 7 backfired, however I posted it's output as a show of just how unreliable it has become.</p> 
-            <div class="codeblock">
+            <div class="codeblock skiptranslate">
 We are checking the service running on port 80
 The process listening on port 80 is /usr/sbin/httpd
 The process running on port 80 is not Apache.
@@ -278,7 +277,7 @@ The process running on port 80 is not Apache.
             
             <p class="main-text">I will do another run on a CentOS 6 machine to get you a copy of the full output. Here goes....</p>
             
-            <div class="codeblock">[root@web2 ~]# curl -sL apachebuddy.pl | perl
+            <div class="codeblock skiptranslate">[root@web2 ~]# curl -sL apachebuddy.pl | perl
 ########################################################################
 # Apache Buddy v 0.3 ###################################################
 ########################################################################
@@ -446,26 +445,26 @@ Settings considered for this report:
             <p class="main-text">We are going to download the code locally with wget, and then hack the perl script and make some changes, and try to execute it again.</p>
             <h3>Begin...</h3>
             <p class="main-text">Our first job is to download the perlscript locally, lets save it to root's home area, /root</p>
-            <p class="codeblock"># wget -O /root/apache2buddy.pl https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl</p>
+            <p class="codeblock skiptranslate"># wget -O /root/apache2buddy.pl https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl</p>
             <p class="figtext">Fig 8: Saving the script locally with wget.</p>
             <p class="main-text">Before we proceed further, I do want to talk a bit about editors. Honestly its up to you what editor you use, if it's nano, a small kitten dies so lets avoid that, just kidding. I recommend that you use an editor that allows you to quickly and easily identify line numbers, and it must be a command-line editor (the assumption here is your production servers arent running a GUI (though seriously one time I found a rackmounted server running X windows and gnome-screensaver....take as long as you need on that one...</p>
             <p class="main-text">Anyway the point I am getting at is that in these examples I will be walking you through the edits with vi/vim, and using line numbers that made sense as of this writing, but as you know time stands still for no man and, well, line numbers may not be the same in a few years time. Its still an active project.</p>
             <p class="main-text">So if I say, on line 80 change this value to that value, and the line i am quoting loks nothing like the line 80 youre working on, have a look in that general area of the code, as things get added or removed, the code I may have been referring to may not be on line 80 any more, but it won't have drifted too far I would'nt have thought. Use your noggin before you complain.</p>
             <p class="main-text">So, if you havent already, make sure you have the following in your <strong>.vimrc</strong> file in root's home as a minimum:</p>
-            <p class="codeblock">set number</p>
+            <p class="codeblock skiptranslate">set number</p>
             <p class="figtext">Fig 9: Setting line numbers in vim using a runtime config file /root/.vimrc</p>
             <p class="main-text">Now edit the file:</p>
-            <p class="codeblock"># vim /root/apache2buddy.pl</p>
+            <p class="codeblock skiptranslate"># vim /root/apache2buddy.pl</p>
             <p class="figtext">Fig 10: Opening up apache2buddy.pl in the vim editor.</p>
             <p class="main-text">Next, we go to line 337 and heed the warning, you can either scroll down untill you get to line 337 or press ESC and then type:</p>
             <p class="codeblock">337g</p>
             <p class="figtext">Fig 11: Moving quickly to line 337 in the vim editor.</p>
             <p class="main-text">Observe the warning in the comments:</p>
-            <p class="codeblock"># Please dont make pull requests to add your distro to this list, that doesnt make it supported.
+            <p class="codeblock skiptranslate"># Please dont make pull requests to add your distro to this list, that doesnt make it supported.
 # The following distros are what I use to test and deploy apache2buddy and only these distro's are supported.</p>
             <p class="figtext">Fig 12: Comments save lives, always read comments.</p>
             <p class="main-text">Add "CloudLinux" to the list of supported Oses:</p>
-            <p class="codeblock">my @supported_os_list = ('Ubuntu',
+            <p class="codeblock skiptranslate">my @supported_os_list = ('Ubuntu',
 				'ubuntu',
 				'Debian',
 				'debian',
@@ -482,16 +481,16 @@ Settings considered for this report:
             </p>
             <p class="figtext">Fig 13: Adding CloudLinux to the list of supported OSes.</p>
             <p class="main-text">Next we need to move to line 360</p>
-            <p class="codeblock">360g</p>
+            <p class="codeblock skiptranslate">360g</p>
             <p class="figtext">Fig 14: Moving quickly to line 360 in the vim editor.</p>
             <p class="main-text">Again, add "CloudLinux" to the list of supported Oses:</p>
-            <p class="codeblock">my @redhat_os_list = ('Red Hat Enterprise Linux', 'redhat', 'CentOS Linux', 'Scientific Linux'<mark>,'CloudLinux'</mark>);</p>
+            <p class="codeblock skiptranslate">my @redhat_os_list = ('Red Hat Enterprise Linux', 'redhat', 'CentOS Linux', 'Scientific Linux'<mark>,'CloudLinux'</mark>);</p>
             <p class="figtext">Fig 15: Adding CloudLinux to the list of supported OSes.</p>
             <h3>"HOLD UP......WAIT A MINUTE.....SOMETHING AIN'T RIGHT...."<sup>[<a href="#biblio4">4</a>]</sup></h3>
             <p class="main-text">I know what youre thinking; this was way too easy, why dont I just add support for cloudlinux and be done with it.</p>
             <p class="main-text">So.... all we have done so far is <em>tricked</em> the AI here into thinking that apache2buddy will run fine on CloudLinux. <em>but of course, theres no guarrantee it will</em>.</p>
             <p class ="main-text">I have even added a <strong>--skip-os-version-check</strong> option to make it even easier to execute:</p>
-            <p class="codeblock"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl - --help
+            <p class="codeblock skiptranslate"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl - --help
 
 Usage: apache2buddy.pl [OPTIONS]
 If no options are specified, the basic tests will be run.
@@ -586,7 +585,7 @@ Key:
             <h2>Walkthrough and interpretation of the results:<br><strong>an example scenario and execution run.</strong></h2>
             <p class="main-text">In this section I walk you through an execution run of apache2buddy.pl, breaking down relevant sections and providing a commentary around it, what I check, how it checks, and any remedial action necessary. I will finish up with an example update to a customer using apache2buddy as my guide and reference point.</p>
             <p class="main-text">Before we break it down, let's take a look as a full execution run output. We can then take some time to break each section down for discussion.</p>
-            <p class="codeblock">[root@web1 ~]# curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl
+            <p class="codeblock skiptranslate">[root@web1 ~]# curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl
 ############################################################
 apache2buddy.pl report for web1.example.com (xxx.xxx.xx.xxx)
 ############################################################
@@ -720,20 +719,23 @@ Last 5 entries:
         <div class="no-print">
             <div class="clearscroll"></div>
         </div>
-        <section class="section-biblio">
+        <section class="section-references">
+            <p style="page-break-before: always"></p>
             <a id="references"></a>
             <div class="row">
-                <p style="page-break-before: always"></p>
                 <h2>References:</h2>
             </div>
             <div class="row biblio">
-                <div id="biblio1">[1] The Apache2Buddy Project Github Page.<br> - <a href="https://github.com/richardforth/apache2buddy" target="_blank">https://github.com/richardforth/apache2buddy</a></div>
-                <br> 
-                <div id="biblio2">[2] McAfee Article on Typesquatting.<br> - <a href="https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/" target="_blank">https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/</a></div>
-                <br> 
-                <div id="biblio3">[3] Wikipedia Definition of Typosquatting.<br> - <a href="https://en.wikipedia.org/wiki/Typosquatting" target="_blank">https://en.wikipedia.org/wiki/Typosquatting</a></div>
-                <br> 
-                <div id="biblio4">[4] YouTube "Hold up wait a minute" (original video).<br> - <a href="https://www.youtube.com/watch?v=vup0K8x4iKQ" target="_blank">https://www.youtube.com/watch?v=vup0K8x4iKQ</a></div>
+                <div class="main-text">
+                    <div id="biblio1">[1] The Apache2Buddy Project Github Page.<br> - <a href="https://github.com/richardforth/apache2buddy" target="_blank">https://github.com/richardforth/apache2buddy</a></div>
+                    <br> 
+                    <div id="biblio2">[2] McAfee Article on Typesquatting.<br> - <a href="https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/" target="_blank">https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/</a></div>
+                    <br> 
+                    <div id="biblio3">[3] Wikipedia Definition of Typosquatting.<br> - <a href="https://en.wikipedia.org/wiki/Typosquatting" target="_blank">https://en.wikipedia.org/wiki/Typosquatting</a></div>
+                    <br> 
+                    <div id="biblio4">[4] YouTube "Hold up wait a minute" (original video).<br> - <a href="https://www.youtube.com/watch?v=vup0K8x4iKQ" target="_blank">https://www.youtube.com/watch?v=vup0K8x4iKQ</a></div>
+                    </div>
+                
             </div>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
@@ -787,11 +789,17 @@ Last 5 entries:
                 document.getElementById("mySidenav").style.width = "0";
             }   
         </script>
+        <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+        </script>
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
-        <script src="vendors/js/jquery.waypoints.min.js"></script>
-        <script src="resources/js/scripts.js"></script> 
+<!--        <script src="resources/js/scripts.js"></script> -->
     </body>
 </html>

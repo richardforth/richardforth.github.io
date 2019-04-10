@@ -37,7 +37,7 @@
 }
 header {
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/azoom.png);
+    background-image: url(img/hero.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -206,7 +206,7 @@ nav {
     position: absolute;
     width: 90%;
     height: 80vh;
-    top: 10%;
+    top: 40%;
     left: 10%;
     
 }

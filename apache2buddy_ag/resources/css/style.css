@@ -11,85 +11,6 @@
     color: #fff;
 }
 
-.more-posts {
-    display: inline;
-}
-
-.more-posts li a:link,
-.more-posts li a:visited,
-.more-posts li a:hover{
-    color: #fff;
-}
-
-/* -------------------------- */
-/* Side-Nav  */
-/* -------------------------- */
-
-.nav-icon {
-    color: #999;
-}
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding: 60px 5px;
-}
-
-.sidenav ul,
-.sidenav ul li,
-.sidenav ul li a {
-    list-style-type: none ! important; 
-    list-style: none ! important;
-    padding: 2px ! important;
-    text-decoration: none ! important ;
-    font-size: 16px;
-    font-family:  "Special Elite", "Arial", sans-serif;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.closebtn {
-    list-style: none;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 400px;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.head-text-box {
-    
-    position: absolute;
-    width: 90%;
-    height: 80vh;
-    top: 40%;
-    left: 10%;
-    
-}
-
 .author {
     position: absolute;
     right: 10%;
@@ -104,6 +25,9 @@
     
 }
 
+.container {
+    margin-bottom: 50px;
+}
 
 .codeblock {
     white-space:pre;
@@ -114,7 +38,7 @@
     background-color: #000;
     color: chartreuse;
     width: 70%;
-    font-size: 60%;
+    font-size: 80%;
     font-family: courier;
     padding: 10px;
     position: relative;
@@ -135,7 +59,7 @@
     border-color: #726a5f;
     background-color: #cecfdd;
     width: 70%;
-    font-size: 60%;
+    font-size: 80%;
     font-family: courier;
     padding: 10px;
     position: relative;

@@ -1,139 +1,15 @@
-* {
-    
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 22px;
-    font-family: "Lato", "Arial", sans-serif;
-    scroll-behavior: smooth;
-    
+.alert {
+    margin-top: 20px;
 }
 
-.section-knownissues ul li,
-.section-usecases ul li,
-.section-support ul li,
-.section-unsupport ul li,
-.section-goals ul li,
-.section-support ul li,
-.section-improvements ul li {
-    color:#73798e;
-    list-style-type: circle;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    position: relative;
-    left: 45px;
-    right: 10%;
-    width: 80%;
-}
-
-.section-knownissues ul,
-.section-usecases ul,
-.section-goals ul,
-.section-support ul,
-.section-unsupport ul,
-.section-improvements ul  {
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-header {
+.jumbotron {
     
-    background-image: url(img/hero.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/azoom.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
-    height: 100vh;
-    
 }
-
-.clearscroll {
-    padding-top: 0px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/azoom.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    height: 35vh;
-    
-}
-
-/* -------------------------- */
-/* main-navigation */
-/* -------------------------- */
-
-
-nav {
-    display:block;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: 1px dotted #555;
-    height: 55px;
-    width: 100%;
-    position: fixed;
-    background-color: #222;
-    color: #787878;
-    z-index: 9999;
-}
-
-
-.logo-top,
-.logo {
-    float: left;
-    padding: 3px;
-    padding-left: 15px;
-    color: #909090;
-    font-size: 35px;
-    text-decoration: none;
-}
-
-.gtrans {
-    display: inline-block;
-}
-
-.navbar {
-    display: block;
-    float: right;
-    margin: 0;
-    padding: 0;
-    width: 525px;
-    height: 100%;
-}
-
-.nav-icon {
-    display: block;
-    padding: 10px;
-    margin-right: 10px;
-    float: right;
-}
-
-.main-nav {
-    display: block;
-    float: left;
-    margin-top: 12px; 
-    margin-right: 0;
-    list-style: none;
-    width: auto;
-}
-
-.main-nav li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-    padding: 0px 0px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
-    
-}
-
-
 
 .more-posts {
     display: inline;
@@ -149,6 +25,9 @@ nav {
 /* Side-Nav  */
 /* -------------------------- */
 
+.nav-icon {
+    color: #999;
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -211,28 +90,6 @@ nav {
     
 }
 
-header h1 {
-    padding-top: 0px ! important;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    color: #fff;
-    font-size: 340%;
-    font-weight: 300;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
-.subheading {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 120%;
-    font-weight: 300;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-    float: left;
-}
-
 .author {
     position: absolute;
     right: 10%;
@@ -247,87 +104,6 @@ header h1 {
     
 }
 
-h2 {
-    padding-top: 55px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    left: 10%;
-    top: 10px;
-    width: 90%;
-    color: #000;
-    font-size: 150%;
-    font-weight: 300;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
-h3 {
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    left: 10%;
-    width: 90%;
-    color: #000;
-    font-size: 100%;
-    font-weight: 400;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
-h4 {
-    text-transform: none;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    left: 10%;
-    width: 90%;
-    color: #000;
-    font-family: 'Dancing Script', cursive;
-    font-size: 90%;
-    font-weight: 400;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
-.intro h4,
-.bestpractice h4{
-
-    font-size: 180%;
-}
-
-.references,
-.main-text {
-    
-    padding-top: 0px;
-    padding-bottom: 50px;
-    position: relative;
-    left: 10%;
-    right: 10%;
-    width: 80%;
-    
-}
-
-div[id*="biblio"] {
-    
-    font-size:65%;
-    left: 10%;
-    width: 80%;
-    line-height: 100%
-    
-}
-
-.backtop {
-    text-align: right;
-    padding-bottom: 20px
-}
-
-div[class*="biblio"] a {
-    
-    font-size:100%;
-}
 
 .codeblock {
     white-space:pre;
@@ -408,9 +184,7 @@ div[class*="biblio"] a {
 }
 
 
-em {
-    font-weight: bolder;
-}
+
 .codeblock mark {
     color: #ff0000;
     font-size: 80%;

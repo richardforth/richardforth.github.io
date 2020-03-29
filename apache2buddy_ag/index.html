@@ -7,8 +7,9 @@
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	</head>
     <body>
+        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-          
+
           <a class="navbar-brand" href="#">apache2buddy.pl</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,55 +28,29 @@
               <li class="nav-item">
                 <a class="nav-link" href="#origins">Origins</a>
               </li>
-                <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="#known-issues">Known issues</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#publicity">Publicity</a>
               </li>
             </ul>
           </div>
-          <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <ul>
-                <li><a href="#" onclick="closeNav()">Back to top</a></li>
-                <li><a href="#section-intro" onclick="closeNav()">Introduction</a></li>
-                <li><a href="#goals" onclick="closeNav()">Goals</a></li>
-                <li><a href="#origins" onclick="closeNav()">Origins</a></li>
-                <li><a href="#polish" onclick="closeNav()">What's with the Polish domain?</a></li>
-                <li><a href="#intro" onclick="closeNav()">Introduction to apache2buddy.pl</a></li>
-                <li><a href="#shortcomings" onclick="closeNav()">Shortcomings of the original</a></li>
-                <li><a href="#improvements" onclick="closeNav()">Improvements in apache2buddy.pl</a></li>
-                <li><a href="#publicity" onclick="closeNav()">Publicity</a></li>
-                <li><a href="#os-support" onclick="closeNav()">Supported Operating Systems</a></li>
-                <li><a href="#os-unsupport" onclick="closeNav()">Un-Supported Operating Systems (what to do)</a></li>
-                <li><a href="#usecases" onclick="closeNav()">Use cases</a></li>
-                <li><a href="#known-issues" onclick="closeNav()">Known issues</a></li>
-                <li><a href="#references" onclick="closeNav()">References</a></li>
-                <hr>
-                <li><a href="#cookies" onclick="closeNav()">Cookies on this site</a></li>
-            </ul>
-            <p>Translate this page:</p>
-            <span id="google_translate_element" class="gtrans" onMouseLeave="closeNav()"></span>
-
-            <!-- 
-
-            -->
-        </div>
-        <div class="nav-icon">
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        </div>
         </nav>
         
-        
-        <div class="jumbotron">
-          <h1 class="display-4">apache2buddy.pl</h1>
-          <p class="lead">Administrator's Guide</p>
-          <hr class="my-4">
-          
-          <a class="btn btn-primary btn-lg" href="https://github.com/richardforth/apache2buddy" role="button">Code</a>
-          <a class="btn btn-warning btn-lg" href="https://github.com/richardforth/apache2buddy/issues" role="button">Issues</a>
-          <div class="alert alert-warning" role="alert">
-              &#9851; This site is under development &amp; refactoring, please bear with me if some elements dont display correctly during this time. 
-          </div>
-        </div>
+        <section class="container">
+            <div class="jumbotron">
+              <h1 class="display-4">apache2buddy.pl</h1>
+              <p class="lead">Administrator's Guide</p>
+              <hr class="my-4">
+
+              <a class="btn btn-primary btn-lg" href="https://github.com/richardforth/apache2buddy" role="button">Code</a>
+              <a class="btn btn-warning btn-lg" href="https://github.com/richardforth/apache2buddy/issues" role="button">Issues</a>
+              <div class="alert alert-warning" role="alert">
+                  &#9851; This site is under development &amp; refactoring, please bear with me if some elements dont display correctly during this time. 
+              </div>
+            </div>
+        </section>
         
         <section class="container">
             <a id="section-intro"></a>
@@ -83,46 +58,39 @@
                 <p style="page-break-before: always"></p>
                 <h2>Introduction and target audience.</h2>
             </div>
-            <div class="row">
-                <p class="main-text">
-                    Thanks for visiting this documentation, I truly believe you've made the right decision, as this contains all I have to offer in terms of learning how to use this powerful tool in the spirit of the way it was originally designed, and intended to be used.
-                </p>
-                <p class="main-text">
-                    My name is Richard Forth and I am the author of apache2buddy.pl. In this document I offer my own personal insights into history, new features, usage, best practice, and tips and tricks to get the best experience with apache2buddy.pl for yourself and your customers - be they yourself, internal reporting lines or external customers or peers.
-                </p>
-                <p class="main-text">
-                    This document is aimed at System Administrators who work with apache webservers on a regular basis, and have a need to tune and troubleshoot apache installations at a variety of levels of technical ability. Ideally you will have 18 months' minimum experience working with Linux systems. This document assumes you are already technical at the intermediate to advanced level.
-                </p>
-                <p class="main-text">
-                    I hope this document delivers all the knowledge it promises whilst keeping you engaged and entertained.</p>
-                <p class="main-text">
-                    Kind Regards,
-                </p>
-                <h4>RAForth</h4>
-                <p class="main-text">
-                    Richard A. Forth<br>
-                    Author and Main Contributor,<br>
-                    <strong><a href="https://github.com/richardforth/apache2buddy" target="_blank">The Apache2buddy Project</a><sup>[<a href="#biblio1">1</a>]</sup></strong>
-                </p>
-                <div class="no-print">
-                    <div class="backtop"><a href="#top">^ Back to top ^</a></div>
-                </div>
+            <p>
+                Thanks for visiting this documentation, I truly believe you've made the right decision, as this contains all I have to offer in terms of learning how to use this powerful tool in the spirit of the way it was originally designed, and intended to be used.
+            </p>
+            <p>
+                My name is Richard Forth and I am the author of apache2buddy.pl. In this document I offer my own personal insights into history, new features, usage, best practice, and tips and tricks to get the best experience with apache2buddy.pl for yourself and your customers - be they yourself, internal reporting lines or external customers or peers.
+            </p>
+            <p>
+                This document is aimed at System Administrators who work with apache webservers on a regular basis, and have a need to tune and troubleshoot apache installations at a variety of levels of technical ability. Ideally you will have 18 months' minimum experience working with Linux systems. This document assumes you are already technical at the intermediate to advanced level.
+            </p>
+            <p>
+                I hope this document delivers all the knowledge it promises whilst keeping you engaged and entertained!
+            </p>
+            <p>
+                Lets begin...
+            </p>
+            <div class="no-print container">
+                <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
         <div class="no-print">
             <div class="clearscroll"></div>
         </div>
-        <section class="section-goals">
+        <section class="container">
             <a id="goals"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>Goals of this Document: What you can expect to know.</h2>
             </div>
             <div class="row">
-                <div class="main-text">
+                <p>
                     By the end of this document, you will be fully up to speed on the history, support, usage and interpretation of the <strong>apache2buddy.pl</strong> script used to tune / troubleshoot apache webserver installations.
                 </div>
-                <div class="main-text">
+                <p>
                     Things you will know and be able to do after reading this document:
                     <ul>
                         <li>Know the history of apache2buddy, including learning about the GrandFather of apache tuning, the <em>original</em> apachebuddy.pl script</li>
@@ -151,14 +119,14 @@
                         <li>How you can contribute to the project using pull requests/issue tracker.</li>
                     </ul>
                 </div>
-                <p class="main-text">Be aware that this is a living document that will be updated regularly, if you find a bullet point above that has not been covered in as much detail as you like, or is missing after a few weeks, raise an issue <a href="https://github.com/richardforth/richardforth.github.io" target="_blank">here</a> and I will make sure to cover that topic in more depth / add relevant sections.</p>
-                <p class="main-text">I havent added a navigation bar yet but there are plans to add navigation and support for mobile devices but that's quite a lot of CSS and jquery heavy lifting I need to do, for now the most important thing is content. Once I have completed the main bulk of my brain-dump on apache2buddy.pl, I will begin the polishing process.</p>
+                <p>Be aware that this is a living document that will be updated regularly, if you find a bullet point above that has not been covered in as much detail as you like, or is missing after a few weeks, raise an issue <a href="https://github.com/richardforth/richardforth.github.io" target="_blank">here</a> and I will make sure to cover that topic in more depth / add relevant sections.</p>
+                <p>I havent added a navigation bar yet but there are plans to add navigation and support for mobile devices but that's quite a lot of CSS and jquery heavy lifting I need to do, for now the most important thing is content. Once I have completed the main bulk of my brain-dump on apache2buddy.pl, I will begin the polishing process.</p>
                 <div class="no-print">
                     <div class="backtop"><a href="#top">^ Back to top ^</a></div>
                 </div>
             </div>
         </section>
-        <section class="history">
+        <section class="history container">
             <a id="origins"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
@@ -166,13 +134,13 @@
                     <strong>apachebuddy.pl</strong></h2>
             </div>
             <div class="row">
-                <p class="main-text">
+                <p>
                     If you're new to apache2buddy.pl, in order to really understand the evolution of the script that we know and love today, we have to first go back and meet the grandfather of apache tuning, <strong>apachebuddy.pl</strong>.
                 </p>
-                <p class="main-text">
+                <p>
                     <strong>apachebuddy.pl</strong> was originally a collaborative project by several Rackspace employees, and was originally built specifically to support <strong>Red Hat Enterprise Linux</strong> systems. It has always been an open source project so it wasn't restricted to internal use at the Rack (so this isn't just an internal tool - its used by people all over the world), however, it was, shall we say <em>mainly</em> used by Rackspace employees to provide support to our customers running Red Hat Enterprise Linux Systems and the Linux, Apache, MySQL, and PHP (LAMP) stack. Without revealing too much in terms of Intellectual Property or internal processes of Rackspace, we have to acknowledge it's birthplace to get a true grip on the factors that influenced it's development.
                 </p>
-                <p class="main-text">
+                <p>
                     In apachebuddy.pl's hey-day, Red Hat Enterprise Linux (RHEL) was the <em>only</em> available operating system we sold / supported on the Linux support floor, so of course it made sense to code apachebuddy.pl accordingly, this may go some way to explain the difference in the size of the code base of apachebuddy.pl when we compare it with apache2buddy.pl (see Fig 1), since it was only written to cater to RHEL systems:
                 </p>
                 <div class="factblock skiptranslate">apachebuddy.pl
@@ -188,16 +156,16 @@ last commit: 8 days ago.*
                 <div class="figtext">
                     Fig 1: Differences in line count and last commit.
                 </div>
-                <p class="main-text">
+                <p>
                     Of course that was 5+ years ago now and times move on, a need arose for further support, as support in the Linux Department expanded to cater mainly for Ubuntu and Debian systems, in addition to Red Hat Enterprise Linux, and it's open source cousin, CentOS. However the apachebuddy project was abandoned by that point and is no longer maintained, but was kept on a external facing github account and has the domain "apachebuddy.pl".
                 </p>
-                <p class="main-text">
+                <p>
                     You can view the original project <a href="https://github.com/gustavmaskowitz/apachebuddy.pl" target="_blank">here</a>.
                 </p>
-                <p class="main-text">
+                <p>
                     If you're also into raw code, you can view it at the domain above or click <a href="https://raw.githubusercontent.com/will-parsons/apachebuddy.pl/master/apachebuddy.pl" target="_blank">here.</a>
                 </p>
-                <p class="main-text">
+                <p>
                     The idea behind the domain pointing at the raw code was to allow one to run <strong>apachebuddy.pl</strong> through a commandline process known as "curl and perl", where you curl the domain and pipe it into perl (see Fig 2):
                 </p>
                 <p class="codeblock skiptranslate"  id="fig2">
@@ -206,70 +174,71 @@ last commit: 8 days ago.*
                 <div class="figtext">
                     Fig 2: An example of the curl-and-perl technique.
                 </div>
-                <p class="main-text">
+                <p>
                     Note: the domain <strong>apachebuddy.pl</strong> points to https://raw.githubusercontent.com/will-parsons/apachebuddy.pl/master/apachebuddy.pl, NOT the "gusmaskowitz" one.
                 </p>
-                <p class="main-text">
+                <p>
                     It's important to note that no one maintains apachebuddy.pl, it is an abandoned project that is hosted for posterity reasons. Some people still use it, but many people have now started using apache2buddy.pl instead, so lets find out why....
                 </p>
-            </div>   
-        </section>
-        <div class="no-print">
+            </div>
+            <div class="no-print container">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
-        </div>     
-        <section class="polishdomain">
+            </div>
+        </section>
+             
+        <section class="polishdomain container">
             <a id="polish"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>What is with the polish domain?</h2>
             </div>
             
-            <p class="main-text">The .pl dns top level domain is indeed Polish. However, it is (probably not in the spirit of the IETF/IANA but hey, people are people) used (possibly inappropriately but from a tech point-of-view is a stroke of genius) to host perl scripts because they also happen to share the same file extension (.pl). As a thank you to the polish people I may one day translate this page in to polish! #challengemuch #przepraszam</p>
-            <p class="main-text">One of the most iconic examples of these domains is the <a href="http://mysqltuner.pl" target="_blank">MySQLTuner project</a>, looked after by Major Hayden. mysqltuner is hosted on the mysqltuner.pl domain. This may also explain the phenomenon known as the  <a href="#fig2">perl and curl method</a> we discussed earilier.</p>
+            <p>The .pl dns top level domain is indeed Polish. However, it is (probably not in the spirit of the IETF/IANA but hey, people are people) used (possibly inappropriately but from a tech point-of-view is a stroke of genius) to host perl scripts because they also happen to share the same file extension (.pl). As a thank you to the polish people I may one day translate this page in to polish! #challengemuch #przepraszam</p>
+            <p>One of the most iconic examples of these domains is the <a href="http://mysqltuner.pl" target="_blank">MySQLTuner project</a>, looked after by Major Hayden. mysqltuner is hosted on the mysqltuner.pl domain. This may also explain the phenomenon known as the  <a href="#fig2">perl and curl method</a> we discussed earilier.</p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="intro">
+        <section class="intro container">
             <a id="intro"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>Introduction to apache2buddy. How I got involved.</h2>
             </div>
-            <p class="main-text">I spoke to Will Parsons who hosts the project on <a href="https://github.com/will-parsons">his github account</a>, about 5 years ago (circa 2013-14), asking him if there were any plans to update it to support Debian and Ubuntu Systems.</p>
-            <p class="main-text">I was told that the code wasn't actually his, and that it was no longer being maintained anyway, and he had no plans to make any updates to apachebuddy.pl.</p>
-            <p class="main-text">I asked him if he didnt mind if I took a copy of it and forked it into a new project, to see what I could do to solve the problems with it not running on Debian or Ubuntu Systems.</p>
-            <p class="main-text">I say "fork" here loosely, as at that time I had no github/git training or knowledge, so I copied the code into a vim editor and originally hosted the apache2buddy project and its associated domain on a LAMP server running in the cloud. I editted the file manually eacg tiime it needed updating, and had no change control or proper backups in place.</p>
-            <p class="main-text">This, as you can imagine, wasnt very easy to maintain, but, over time I grew to learn and adopt git/github repositories and learnt how to commit changes, slowly over time I migrated away from a LAMP server to hosting the code on my own github repository:</p>
+            <p>I spoke to Will Parsons who hosts the project on <a href="https://github.com/will-parsons">his github account</a>, about 5 years ago (circa 2013-14), asking him if there were any plans to update it to support Debian and Ubuntu Systems.</p>
+            <p>I was told that the code wasn't actually his, and that it was no longer being maintained anyway, and he had no plans to make any updates to apachebuddy.pl.</p>
+            <p>I asked him if he didnt mind if I took a copy of it and forked it into a new project, to see what I could do to solve the problems with it not running on Debian or Ubuntu Systems.</p>
+            <p>I say "fork" here loosely, as at that time I had no github/git training or knowledge, so I copied the code into a vim editor and originally hosted the apache2buddy project and its associated domain on a LAMP server running in the cloud. I editted the file manually eacg tiime it needed updating, and had no change control or proper backups in place.</p>
+            <p>This, as you can imagine, wasnt very easy to maintain, but, over time I grew to learn and adopt git/github repositories and learnt how to commit changes, slowly over time I migrated away from a LAMP server to hosting the code on my own github repository:</p>
             <div class="factblock skiptranslate">https://github.com/richardforth/apache2buddy</div>
             <p class="figtext">Fig 4: The home of apache2buddy.pl</p>
-            <p class="main-text">Originally I had the domain <strong>apache2buddy.pl</strong> pointed to the <a href="https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl" target="_blank">raw code</a>, just like Will did with the original <strong>apachebuddy.pl</strong>domain (see <a href="#fig5">curl and perl method</a>).</p>
-            <p class="main-text">However I got itchy feet and a tick in my face whenever I gave any thought to the fact that the <a href="#fig5">curl and perl method</a> was open to malicious bad actors typocamping/typosquatting <sup>[<a href="#biblio2">2</a>][<a href="#biblio3">3</a>]</sup> on slightly mispelled domains. It kept me up at night that this also had to be done as root, on systems globally. Even though I knew I wasn't really responsible for end users doing something silly like curling and mistyping a domain name, and then piping that into perl, as root (and enabling some bad actor which maybe registered a mis-spelt version of the apache2buddy.pl domain in the hope they catch a fish with a malicious root compromise perl script or bitcoin miner or something equally unwelcome).</p>
-            <p class="main-text">So to that end I pointed the domain away from the code and forced people who still wished to curl and perl, use the whole complete github path to the raw code, since it was much more difficult to land in hot water due to a mistyped URL:
+            <p>Originally I had the domain <strong>apache2buddy.pl</strong> pointed to the <a href="https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl" target="_blank">raw code</a>, just like Will did with the original <strong>apachebuddy.pl</strong>domain (see <a href="#fig5">curl and perl method</a>).</p>
+            <p>However I got itchy feet and a tick in my face whenever I gave any thought to the fact that the <a href="#fig5">curl and perl method</a> was open to malicious bad actors typocamping/typosquatting <sup>[<a href="#biblio2">2</a>][<a href="#biblio3">3</a>]</sup> on slightly mispelled domains. It kept me up at night that this also had to be done as root, on systems globally. Even though I knew I wasn't really responsible for end users doing something silly like curling and mistyping a domain name, and then piping that into perl, as root (and enabling some bad actor which maybe registered a mis-spelt version of the apache2buddy.pl domain in the hope they catch a fish with a malicious root compromise perl script or bitcoin miner or something equally unwelcome).</p>
+            <p>So to that end I pointed the domain away from the code and forced people who still wished to curl and perl, use the whole complete github path to the raw code, since it was much more difficult to land in hot water due to a mistyped URL:
             <div class="codeblock skiptranslate"  id="fig5"># curl -sL apache2buddy.pl | perl</div>
             <p class="figtext">Fig5: The curl and perl method we ran originally. This no longer works, you will get errors.</p>
             <div class="codeblock skiptranslate"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl</div>
             <p class="figtext">Fig 6: The curl and perl method we run today.</p>
-            <p class="main-text">While the first example looks more aesthetically pleasing to the eye, and is easy to remember, as commands go, it was vulnerable to a typosquatting attack, consider the following BAD command (trigger warning - I have no idea if that domain is registered and if it has a malicious perl code behind it - it's just an example to illustrate what I mean by typo-squatting attacks).
+            <p>While the first example looks more aesthetically pleasing to the eye, and is easy to remember, as commands go, it was vulnerable to a typosquatting attack, consider the following BAD command (trigger warning - I have no idea if that domain is registered and if it has a malicious perl code behind it - it's just an example to illustrate what I mean by typo-squatting attacks).
             <div class="codeblock skiptranslate"># curl -sL apache2buddy.pl | perl</div>
             <p class="figtext">Fig 7: An example of a mistyped domain in a command that could run other, potentially arbitraryor malicious perl code (as root).</p>
-            <p class="main-text">Did you notice in Figure 7 that there were three d's in this last example? Suppose someone wrote a bad perl script and you mistyped the domain as above.... well, through your own fat, sausage fingers, you now <em>potentiially</em> aided in a third party root compromising your server. Slow clap...</p>
-            <p class="main-text">Though I could never take responsibility for your own faux pas, I decided to no longer support using the domain name as part of the curl and perl technique as a saftey precaution, and so repointed it  - originally to a blog, then to this page (you get some random perl errors because perl would try to parse HTML).</p>
-            <p class="main-text">For about a year during the transition amd before I finally pointed the domain to a wordpress blog, effectively breaking it, I first created a simple perl script that printed a public service announcement on the terminal window, advising them that the new method was as per Fig 5 (above), and that eventually curling the domain and piping it into perl would not work, and pointed the domain to that.<sup>[ reference needed ]</sup></p>
-            <p class="main-text">That pretty much brings you up to speed on how apache2buddy.pl came to be, and how I got involved, without delving too deep into code, but don't be fooled - I'm breaking you in gently...</p>
-            <div class="no-print">
+            <p>Did you notice in Figure 7 that there were three d's in this last example? Suppose someone wrote a bad perl script and you mistyped the domain as above.... well, through your own fat, sausage fingers, you now <em>potentiially</em> aided in a third party root compromising your server. Slow clap...</p>
+            <p>Though I could never take responsibility for your own faux pas, I decided to no longer support using the domain name as part of the curl and perl technique as a saftey precaution, and so repointed it  - originally to a blog, then to this page (you get some random perl errors because perl would try to parse HTML).</p>
+            <p>For about a year during the transition amd before I finally pointed the domain to a wordpress blog, effectively breaking it, I first created a simple perl script that printed a public service announcement on the terminal window, advising them that the new method was as per Fig 5 (above), and that eventually curling the domain and piping it into perl would not work, and pointed the domain to that.<sup>[ reference needed ]</sup></p>
+            <p>That pretty much brings you up to speed on how apache2buddy.pl came to be, and how I got involved, without delving too deep into code, but don't be fooled - I'm breaking you in gently...</p>
+            <div class="no-print container">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="shortcomings">
+        <section class="shortcomings container">
             <a id="shortcomings"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>Shortcomings of the original.</h2>
             </div>
-            <p class="main-text">The original <strong>apachebuddy.pl</strong> had a couple of major shortcomings. Firstly it only ever gave you a calculation of Maxclients/MaxRequestWorkers based on total installed RAM and <em>not</em> taking into consideration any running services that consume RAM.</p>
-            <p class="main-text">Secondly, but more pressingly at the time, the main issue was that <strong>apachebuddy.pl</strong> only worked on Red Hat Enterprise Linux systems, it didn't run on Ubuntu or Debian systems* which came into support at Rackspace around 5 years ago, a solution had to be found.</p>
-            <p class="main-text"><em>* I beleive it does now, but it is not maintained, and hasnt been committed to in over 5 years, and can be hit and miss.</em></p>
+            <p>The original <strong>apachebuddy.pl</strong> had a couple of major shortcomings. Firstly it only ever gave you a calculation of Maxclients/MaxRequestWorkers based on total installed RAM and <em>not</em> taking into consideration any running services that consume RAM.</p>
+            <p>Secondly, but more pressingly at the time, the main issue was that <strong>apachebuddy.pl</strong> only worked on Red Hat Enterprise Linux systems, it didn't run on Ubuntu or Debian systems* which came into support at Rackspace around 5 years ago, a solution had to be found.</p>
+            <p><em>* I beleive it does now, but it is not maintained, and hasnt been committed to in over 5 years, and can be hit and miss.</em></p>
             <div class="codeblock skiptranslate">[root@web1 ~]# curl -sL apachebuddy.pl | perl
 ########################################################################
 # Apache Buddy v 0.3 ###################################################
@@ -282,7 +251,7 @@ The process running on port 80 is not Apache.
 Could not find Apache process. Exiting...
             </div>
             <p class="figtext">Fig3: The original and unmaintained apachebuddy.pl script output, not to be confused with apache2buddy.pl. It doesnt like CentOS 7  / apache 2.4 it seems.</p>
-            <p class="main-text">That demo using CentOS 7 backfired, however I posted it's output as a show of just how unreliable it has become.</p> 
+            <p>That demo using CentOS 7 backfired, however I posted it's output as a show of just how unreliable it has become.</p> 
             <div class="codeblock skiptranslate">
 We are checking the service running on port 80
 The process listening on port 80 is /usr/sbin/httpd
@@ -290,7 +259,7 @@ The process running on port 80 is not Apache.
             </div>
             <p class="figtext">Fig3a: Pretty sure thats apache.</p>
             
-            <p class="main-text">I will do another run on a CentOS 6 machine to get you a copy of the full output. Here goes....</p>
+            <p>I will do another run on a CentOS 6 machine to get you a copy of the full output. Here goes....</p>
             
             <div class="codeblock skiptranslate">[root@web2 ~]# curl -sL apachebuddy.pl | perl
 ########################################################################
@@ -337,20 +306,20 @@ Settings considered for this report:
             </div>
             <p class="figtext">Fig3: The original and unmaintained apachebuddy.pl script output from CentOS 6, not to be confused with apache2buddy.pl. It doesnt like CentOS 7  / apache 2.4 it seems</p>
             
-            <p class="main-text">Here we see a successful run on a CentOS 6.10 machine. But since it doesnt run on CentOS 7, its quickly becoming less functional. Note also how it has calculated a maxclients value based on 990MB of RAM and a largest proces size of 4.74 MB of memory. This is a fairly rudimentary calculation that doesn't consider any other running services on the system that might consume memory. So the recommendation based on total installed RAM is of limited value, what we need is a calculation based on remaining RAM after key services have been taken into consideration.</p>
-            <p class="main-text"> Though it seems like I might be just completely dismissive of apachebuddy.pl, I actually owe it a ton of respect, like a village elder, as <strong>apachebuddy.pl</strong> is the forefather of apache2buddy.pl, which builds upon the foundations laid down by <strong>apachebuddy.pl</strong> originally. 
-            <div class="no-print">
+            <p>Here we see a successful run on a CentOS 6.10 machine. But since it doesnt run on CentOS 7, its quickly becoming less functional. Note also how it has calculated a maxclients value based on 990MB of RAM and a largest proces size of 4.74 MB of memory. This is a fairly rudimentary calculation that doesn't consider any other running services on the system that might consume memory. So the recommendation based on total installed RAM is of limited value, what we need is a calculation based on remaining RAM after key services have been taken into consideration.</p>
+            <p> Though it seems like I might be just completely dismissive of apachebuddy.pl, I actually owe it a ton of respect, like a village elder, as <strong>apachebuddy.pl</strong> is the forefather of apache2buddy.pl, which builds upon the foundations laid down by <strong>apachebuddy.pl</strong> originally. 
+            <div class="no-print container">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
-        <section class="section-improvements">
+        <section class="section-improvements container">
             <a id="improvements"></a>
             <div class="row">
                 <p style="page-break-before: always"></p>
                 <h2>A high - level summary of the key improvements to apache2buddy.pl</h2>
             </div>
             <div class="row">
-                <div class="main-text">
+                <p>
                     <ul>
                         <li>Added support for Scientific Linux systems.</li>
                         <li>Added support for CentOS systems.</li>
@@ -377,7 +346,7 @@ Settings considered for this report:
                 </div>
             </div>
             
-            <div class="no-print">
+            <div class="no-print container">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
@@ -385,13 +354,13 @@ Settings considered for this report:
             <a id="publicity"></a>
             <p style="page-break-before: always"></p>
             <h2>Unprompted (but welcome) publicity received for apache2buddy.pl.</h2>
-            <p class="main-text">
+            <p>
               Apache2buddy caught the attention of TechRepublic a few years back and they wrote an article telling people "How to tune apache webserver in seconds". This was pretty awesome and I was stoked that I made a respected online publication.
             </p>
-            <p class="main-text">
+            <p>
               You can read that article <a href="http://www.techrepublic.com/article/how-to-tune-apache-in-seconds-with-apache2buddy-pl/" target="_blank">here</a>.
             </p>
-            <p class="main-text">
+            <p>
                 These reviews were completely independent, I have no idea who wrote them or how they came to be, they were certainly not solicited by me…..but…..welcome all the same :)
             </p>
             <div class="no-print">
@@ -405,7 +374,7 @@ Settings considered for this report:
                 <h2>Supported Operating Systems</h2>
             </div>
             <div class="row">
-                <div class="main-text">These are the operating systems that are OFFICIALLY supported.
+                <p>These are the operating systems that are OFFICIALLY supported.
                 <ul>
                     <li>Red Hat Enterprise Linux.</li>
                     <li>CentOS.</li>
@@ -414,13 +383,13 @@ Settings considered for this report:
                     <li>Ubuntu.</li>   
                 </ul>
             </div>
-            <div class="main-text">
+            <p>
                 Note that it may run just fine on others, but that would be a fluke and not by any design. Support follows as much as possible, the original OS lifecycle dates (ie, when the vendor EOLs the OS, I remove it from apache2buddy support. The script will NOT run on EOL systems.
             </div>
-            <div class="main-text">
+            <p>
                 But, I hear you say, what if I have a business need to run old cruddy hardware and unpatched systems? Or what if my OS isn't supported by apache2buddy.pl? How can I force it to run?
             </div>
-            <div class="main-text">
+            <p>
                 <em>Come with me my friend, for the answers you seek lay just ahead...</em>
             </div>
             </div>
@@ -437,10 +406,10 @@ Settings considered for this report:
                 <h2>What do I do if my OS isnt listed under "Supported Operating Systems"?</h2>
             </div>            
             <div class="row">
-                <div class="main-text">
+                <p>
                     Welome to the world of Free and Open Souce Software (FOSS). I have had many requests to add support for other operating systems, and the answer has always been no, and it always will be.
                 </div>
-                <div class="main-text">
+                <p>
                     But, I am not a monster. Here are some high-level suggestions on how I would recommend you proceed. We can deep dive into each option as required:
                     <ul>
                         <li>Fork the project on github. Make your own custom changes to the script.</li>
@@ -451,34 +420,34 @@ Settings considered for this report:
             
             
             
-            <p class="main-text">At the end of the day, I can only do so much testing, and I chose, for my own sanity, to only support the big four OSes, Debian, and its most famous branch-off - Ubuntu, and of course RHEL, and the two other major distros based on that CentOS and Scientific.</p>
-            <p class="main-text">I have never prevented anyone from hacking their own private version of the script, so long as they adhere to the spirit of the Apache 2.0 License.</p>
-            <p class="main-text">So lets go on a journey of discovery as I walk you through a fictional scenario: we are going to fudge apache2buddy to run on an unsupported OS Version.</p>
+            <p>At the end of the day, I can only do so much testing, and I chose, for my own sanity, to only support the big four OSes, Debian, and its most famous branch-off - Ubuntu, and of course RHEL, and the two other major distros based on that CentOS and Scientific.</p>
+            <p>I have never prevented anyone from hacking their own private version of the script, so long as they adhere to the spirit of the Apache 2.0 License.</p>
+            <p>So lets go on a journey of discovery as I walk you through a fictional scenario: we are going to fudge apache2buddy to run on an unsupported OS Version.</p>
             <h3>The Dilemma</h3>
-            <p class="main-text">You have a requirement to tune apache on a CloudLinux 7 machine, but apache2buddy exits with an error stating that it only currently supports a certain list of RED Hat based OSes, but we know that CloudLinux is based on Red Hat Enterprise Linux.</p>
+            <p>You have a requirement to tune apache on a CloudLinux 7 machine, but apache2buddy exits with an error stating that it only currently supports a certain list of RED Hat based OSes, but we know that CloudLinux is based on Red Hat Enterprise Linux.</p>
             <h3>The Proposition / Solution</h3>
-            <p class="main-text">We are going to download the code locally with wget, and then hack the perl script and make some changes, and try to execute it again.</p>
+            <p>We are going to download the code locally with wget, and then hack the perl script and make some changes, and try to execute it again.</p>
             <h3>Begin...</h3>
-            <p class="main-text">Our first job is to download the perlscript locally, lets save it to root's home area, /root</p>
+            <p>Our first job is to download the perlscript locally, lets save it to root's home area, /root</p>
             <p class="codeblock skiptranslate"># wget -O /root/apache2buddy.pl https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl</p>
             <p class="figtext">Fig 8: Saving the script locally with wget.</p>
-            <p class="main-text">Before we proceed further, I do want to talk a bit about editors. Honestly its up to you what editor you use, if it's nano, a small kitten dies so lets avoid that, just kidding. I recommend that you use an editor that allows you to quickly and easily identify line numbers, and it must be a command-line editor (the assumption here is your production servers arent running a GUI (though seriously one time I found a rackmounted server running X windows and gnome-screensaver....take as long as you need on that one...</p>
-            <p class="main-text">Anyway the point I am getting at is that in these examples I will be walking you through the edits with vi/vim, and using line numbers that made sense as of this writing, but as you know time stands still for no man and, well, line numbers may not be the same in a few years time. Its still an active project.</p>
-            <p class="main-text">So if I say, on line 80 change this value to that value, and the line i am quoting loks nothing like the line 80 youre working on, have a look in that general area of the code, as things get added or removed, the code I may have been referring to may not be on line 80 any more, but it won't have drifted too far I would'nt have thought. Use your noggin before you complain.</p>
-            <p class="main-text">So, if you havent already, make sure you have the following in your <strong>.vimrc</strong> file in root's home as a minimum:</p>
+            <p>Before we proceed further, I do want to talk a bit about editors. Honestly its up to you what editor you use, if it's nano, a small kitten dies so lets avoid that, just kidding. I recommend that you use an editor that allows you to quickly and easily identify line numbers, and it must be a command-line editor (the assumption here is your production servers arent running a GUI (though seriously one time I found a rackmounted server running X windows and gnome-screensaver....take as long as you need on that one...</p>
+            <p>Anyway the point I am getting at is that in these examples I will be walking you through the edits with vi/vim, and using line numbers that made sense as of this writing, but as you know time stands still for no man and, well, line numbers may not be the same in a few years time. Its still an active project.</p>
+            <p>So if I say, on line 80 change this value to that value, and the line i am quoting loks nothing like the line 80 youre working on, have a look in that general area of the code, as things get added or removed, the code I may have been referring to may not be on line 80 any more, but it won't have drifted too far I would'nt have thought. Use your noggin before you complain.</p>
+            <p>So, if you havent already, make sure you have the following in your <strong>.vimrc</strong> file in root's home as a minimum:</p>
             <p class="codeblock skiptranslate">set number</p>
             <p class="figtext">Fig 9: Setting line numbers in vim using a runtime config file /root/.vimrc</p>
-            <p class="main-text">Now edit the file:</p>
+            <p>Now edit the file:</p>
             <p class="codeblock skiptranslate"># vim /root/apache2buddy.pl</p>
             <p class="figtext">Fig 10: Opening up apache2buddy.pl in the vim editor.</p>
-            <p class="main-text">Next, we go to line 337 and heed the warning, you can either scroll down untill you get to line 337 or press ESC and then type:</p>
+            <p>Next, we go to line 337 and heed the warning, you can either scroll down untill you get to line 337 or press ESC and then type:</p>
             <p class="codeblock">337g</p>
             <p class="figtext">Fig 11: Moving quickly to line 337 in the vim editor.</p>
-            <p class="main-text">Observe the warning in the comments:</p>
+            <p>Observe the warning in the comments:</p>
             <p class="codeblock skiptranslate"># Please dont make pull requests to add your distro to this list, that doesnt make it supported.
 # The following distros are what I use to test and deploy apache2buddy and only these distro's are supported.</p>
             <p class="figtext">Fig 12: Comments save lives, always read comments.</p>
-            <p class="main-text">Add "CloudLinux" to the list of supported Oses:</p>
+            <p>Add "CloudLinux" to the list of supported Oses:</p>
             <p class="codeblock skiptranslate">my @supported_os_list = ('Ubuntu',
 				'ubuntu',
 				'Debian',
@@ -495,15 +464,15 @@ Settings considered for this report:
                                 <mark>'CloudLinux'</mark>);
             </p>
             <p class="figtext">Fig 13: Adding CloudLinux to the list of supported OSes.</p>
-            <p class="main-text">Next we need to move to line 360</p>
+            <p>Next we need to move to line 360</p>
             <p class="codeblock skiptranslate">360g</p>
             <p class="figtext">Fig 14: Moving quickly to line 360 in the vim editor.</p>
-            <p class="main-text">Again, add "CloudLinux" to the list of supported Oses:</p>
+            <p>Again, add "CloudLinux" to the list of supported Oses:</p>
             <p class="codeblock skiptranslate">my @redhat_os_list = ('Red Hat Enterprise Linux', 'redhat', 'CentOS Linux', 'Scientific Linux'<mark>,'CloudLinux'</mark>);</p>
             <p class="figtext">Fig 15: Adding CloudLinux to the list of supported OSes.</p>
             <h3>"HOLD UP......WAIT A MINUTE.....SOMETHING AIN'T RIGHT...."<sup>[<a href="#biblio4">4</a>]</sup></h3>
-            <p class="main-text">I know what youre thinking; this was way too easy, why dont I just add support for cloudlinux and be done with it.</p>
-            <p class="main-text">So.... all we have done so far is <em>tricked</em> the AI here into thinking that apache2buddy will run fine on CloudLinux. <em>but of course, theres no guarrantee it will</em>.</p>
+            <p>I know what youre thinking; this was way too easy, why dont I just add support for cloudlinux and be done with it.</p>
+            <p>So.... all we have done so far is <em>tricked</em> the AI here into thinking that apache2buddy will run fine on CloudLinux. <em>but of course, theres no guarrantee it will</em>.</p>
             <p class ="main-text">I have even added a <strong>--skip-os-version-check</strong> option to make it even easier to execute:</p>
             <p class="codeblock skiptranslate"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl - --help
 
@@ -544,7 +513,7 @@ Key:
 #</p>
             <p class="figtext">Fig 16: Help, outlining the option to skip OS version checks altogether, note that things might not go as well as you might hope.</p>
             <p class ="main-text">The method I outlined here will get you so far, but you may have to fix other errors that crop up as you'll be running apache2buddy.pl in unknown territory. The above edits may or may not allow the script to run to completion.</p>
-            <p class="main-text">If you are a really competent perl / python coder, you can do what <strong>psytester</strong> did and submit a pull request to add OS support, which <strong>psytester</strong> did to add support to SuSE Linux systems, I merged <strong>psytester</strong>'s changes <a href="https://github.com/richardforth/apache2buddy/pull/284/commits/cf48b9edae37745c35b305ff59cc1198854f878d" target="_blank">here</a>, but note that I haven't acknowledged that SuSE is a Supported OS as I do not have the capability or capacity to test against SuSE systems. If it works, then great, if it does'nt, one hopes that <strong>psytester</strong> will submit further pull requests in the future to maintain support for SuSE.</p>
+            <p>If you are a really competent perl / python coder, you can do what <strong>psytester</strong> did and submit a pull request to add OS support, which <strong>psytester</strong> did to add support to SuSE Linux systems, I merged <strong>psytester</strong>'s changes <a href="https://github.com/richardforth/apache2buddy/pull/284/commits/cf48b9edae37745c35b305ff59cc1198854f878d" target="_blank">here</a>, but note that I haven't acknowledged that SuSE is a Supported OS as I do not have the capability or capacity to test against SuSE systems. If it works, then great, if it does'nt, one hopes that <strong>psytester</strong> will submit further pull requests in the future to maintain support for SuSE.</p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
@@ -559,7 +528,7 @@ Key:
                 <h2>Use Cases.</h2>
             </div>
             <div class="row">
-                <div class="main-text">
+                <p>
                     Reasons why you would want to run apache2buddy.pl on your server.
                     <ul>
                         <li>Post Mortem Investigation and Tuning Apache after an Incident attributed to apache, such as:</li>
@@ -586,10 +555,10 @@ Key:
             <p style="page-break-before: always"></p>
             <h2>Best practices when working with apache2buddy.pl</h2>
             <h4>"Anyone can swing a sword, but only the Samurai know how to truly handle it with grace and skill."</h4>
-            <p class="main-text">Let's deal with the elephant in the room: apache2buddy.pl produces a LOT of output, and it is <em>NOT</em> designed to be the club with which you beat your customers over the head.</p>
-            <p class="main-text">Think of it like a dashboard, or a fighter-pilot's HUD (Heads Up Display), so that you, the discerning System Administrator, can use the information to help you come to a business decision and use <em>PARTS</em> of the output, to help your case when influencing others, be they a customer in a support ticket, your technical director, server teams, management, or other invested parties.</p>
-            <p class="main-text">I can categorically affirm that it was <em>not</em> built to be user friendly or customer-facing - it's a <em>technical tool</em> for <em>technical people</em>. That's not to say that technically minded end-users are forbidden from running it, but if you as a Systems Admnistrator are slapping your non-technical customers with the full output from apache2buddy.pl, or even apachebuddy.pl - like the Hammer of Thor - then you're not using it correctly.</p>
-            <p class="main-text">In the next section we will learn how to get, execute, and run the script, as well as how to interpret the results and present your case in your own words, appropriately, using small snippets of output to highlight certain facts. At the end of that section, I will do a fake update/email/ticket that shows best practice in using apache2buddy findings <em>effectively</em> in your communications.</p>
+            <p>Let's deal with the elephant in the room: apache2buddy.pl produces a LOT of output, and it is <em>NOT</em> designed to be the club with which you beat your customers over the head.</p>
+            <p>Think of it like a dashboard, or a fighter-pilot's HUD (Heads Up Display), so that you, the discerning System Administrator, can use the information to help you come to a business decision and use <em>PARTS</em> of the output, to help your case when influencing others, be they a customer in a support ticket, your technical director, server teams, management, or other invested parties.</p>
+            <p>I can categorically affirm that it was <em>not</em> built to be user friendly or customer-facing - it's a <em>technical tool</em> for <em>technical people</em>. That's not to say that technically minded end-users are forbidden from running it, but if you as a Systems Admnistrator are slapping your non-technical customers with the full output from apache2buddy.pl, or even apachebuddy.pl - like the Hammer of Thor - then you're not using it correctly.</p>
+            <p>In the next section we will learn how to get, execute, and run the script, as well as how to interpret the results and present your case in your own words, appropriately, using small snippets of output to highlight certain facts. At the end of that section, I will do a fake update/email/ticket that shows best practice in using apache2buddy findings <em>effectively</em> in your communications.</p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
@@ -598,8 +567,8 @@ Key:
         <section class="interpretation">
             <p style="page-break-before: always"></p>
             <h2>Walkthrough and interpretation of the results:<br><strong>an example scenario and execution run.</strong></h2>
-            <p class="main-text">In this section I walk you through an execution run of apache2buddy.pl, breaking down relevant sections and providing a commentary around it, what I check, how it checks, and any remedial action necessary. I will finish up with an example update to a customer using apache2buddy as my guide and reference point.</p>
-            <p class="main-text">Before we break it down, let's take a look as a full execution run output. We can then take some time to break each section down for discussion.</p>
+            <p>In this section I walk you through an execution run of apache2buddy.pl, breaking down relevant sections and providing a commentary around it, what I check, how it checks, and any remedial action necessary. I will finish up with an example update to a customer using apache2buddy as my guide and reference point.</p>
+            <p>Before we break it down, let's take a look as a full execution run output. We can then take some time to break each section down for discussion.</p>
             <p class="codeblock skiptranslate">[root@web1 ~]# curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl
 ############################################################
 apache2buddy.pl report for web1.example.com (xxx.xxx.xx.xxx)
@@ -694,8 +663,8 @@ Last 5 entries:
             </p>
             <p class="figtext">Fig 17: Output from apache2buddy.pl - not to be used as a club to beat your customers into submission.</p>
             
-            <p class="main-text">Next we will inspect and discuss the relevant parts of the output in more detail.</p>
-            <p class="main-text">Analysis to follow.</p>
+            <p>Next we will inspect and discuss the relevant parts of the output in more detail.</p>
+            <p>Analysis to follow.</p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
@@ -710,7 +679,7 @@ Last 5 entries:
                 <h2>Known Issues</h2>
             </div>
             <div class="row">
-                <div class="main-text">
+                <p>
                     As of this writing there is <a href="https://github.com/richardforth/apache2buddy/issues">1 open issue</a>:
                 
                     <ul>
@@ -725,7 +694,7 @@ Last 5 entries:
         <section class="reportingissues">
             <p style="page-break-before: always"></p>
             <h2>Reporting Issues</h2>
-            <p class="main-text">Issues can be raised directly on GitHub <a href="https://github.com/richardforth/apache2buddy/issues">here</a>.</p>
+            <p>Issues can be raised directly on GitHub <a href="https://github.com/richardforth/apache2buddy/issues">here</a>.</p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
@@ -741,7 +710,7 @@ Last 5 entries:
                 <h2>References:</h2>
             </div>
             <div class="row biblio">
-                <div class="main-text">
+                <p>
                     <div id="biblio1">[1] The Apache2Buddy Project Github Page.<br> - <a href="https://github.com/richardforth/apache2buddy" target="_blank">https://github.com/richardforth/apache2buddy</a></div>
                     <br> 
                     <div id="biblio2">[2] McAfee Article on Typesquatting.<br> - <a href="https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/" target="_blank">https://securingtomorrow.mcafee.com/consumer/family-safety/what-is-typosquatting/</a></div>

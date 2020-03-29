@@ -37,12 +37,12 @@
     border-color: #726a5f;
     background-color: #000;
     color: chartreuse;
-    width: 70%;
+    width: 85%;
     font-size: 80%;
     font-family: courier;
     padding: 10px;
     position: relative;
-    left: 15%;
+    left: 5%;
     margin-top: 20px;
     margin-bottom: 0px;
     overflow-x: scroll;
@@ -97,14 +97,14 @@
 }
 
 .figtext{
-    width: 70%;
+    width: 85%;
     font-size: 80%;
     font-family: sans-serif;
     font-weight:bolder;
     padding-top:0px;
     padding-bottom: 30px;
     position: relative;
-    left: 15%;
+    left: 5%;
 }
 
 
@@ -116,8 +116,15 @@
 }
 
 footer {
-    background-color: darkgray;
-    height: 600px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    padding-top: 7px;
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    color: #909090;
 }
 
 /*alternate section backgrounds to distinguish sections */
@@ -136,6 +143,10 @@ footer {
     {
         display: none !important;
     }
+}
+
+.biblio {
+    padding-left: 20px;
 }
 
 /**********************************

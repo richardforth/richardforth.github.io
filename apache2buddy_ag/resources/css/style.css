@@ -116,6 +116,10 @@
     font-family: courier;
 }
 
+.codeblock strong {
+    color: #00dddd;
+}
+
 footer {
     position: fixed;
     bottom: 0;

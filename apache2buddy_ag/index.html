@@ -472,7 +472,7 @@ Settings considered for this report:
             <p>I know what youre thinking; this was way too easy, why dont I just add support for cloudlinux and be done with it.</p>
             <p>So.... all we have done so far is <em>tricked</em> the AI here into thinking that apache2buddy will run fine on CloudLinux. <em>but of course, theres no guarrantee it will</em>.</p>
             <p class ="main-text">I have even added a <strong>--skip-os-version-check</strong> option to make it even easier to execute:</p>
-            <p class="codeblock skiptranslate"># curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl - --help
+            <p class="codeblock skiptranslate"># <strong>curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl - --help</strong>
 
 Usage: apache2buddy.pl [OPTIONS]
 If no options are specified, the basic tests will be run.
@@ -550,15 +550,127 @@ Key:
         <section class="bestpractice container">
             <p style="page-break-before: always"></p>
             <h2>Best practices when working with apache2buddy.pl</h2>
-            <h4>"Anyone can swing a sword, but only the Samurai know how to truly handle it with grace and skill."</h4>
-            <p>Let's deal with the elephant in the room: apache2buddy.pl produces a LOT of output, and it is <em>NOT</em> designed to be the club with which you beat your customers over the head.</p>
-            <p>Think of it like a dashboard, or a fighter-pilot's HUD (Heads Up Display), so that you, the discerning System Administrator, can use the information to help you come to a business decision and use <em>PARTS</em> of the output, to help your case when influencing others, be they a customer in a support ticket, your technical director, server teams, management, or other invested parties.</p>
-            <p>I can categorically affirm that it was <em>not</em> built to be user friendly or customer-facing - it's a <em>technical tool</em> for <em>technical people</em>. That's not to say that technically minded end-users are forbidden from running it, but if you as a Systems Admnistrator are slapping your non-technical customers with the full output from apache2buddy.pl, or even apachebuddy.pl - like the Hammer of Thor - then you're not using it correctly.</p>
-            <p>In the next section we will learn how to get, execute, and run the script, as well as how to interpret the results and present your case in your own words, appropriately, using small snippets of output to highlight certain facts. At the end of that section, I will do a fake update/email/ticket that shows best practice in using apache2buddy findings <em>effectively</em> in your communications.</p>
+            <h4>
+                "Anyone can swing a sword, but only the Samurai know how to truly handle it with grace and skill."
+            </h4>
+            <p>
+                Let's deal with the elephant in the room: apache2buddy.pl produces a LOT of output, and it is <em>NOT</em> designed to be the club with which you beat your customers over the head.
+            </p>
+            <p>
+                Think of it like a dashboard, or a fighter-pilot's HUD (Heads Up Display), so that you, the discerning System Administrator, can use the information to help you come to a business decision and use <em>PARTS</em> of the output, to help your case when influencing others, be they a customer in a support ticket, your technical director, server teams, management, or other invested parties.
+            </p>
+            <p>
+                I can categorically affirm that it was <em>not</em> built to be user friendly or customer-facing - it's a <em>technical tool</em> for <em>technical people</em>. That's not to say that technically minded end-users are forbidden from running it, but if you as a Systems Admnistrator are slapping your non-technical customers with the full output from apache2buddy.pl, or even apachebuddy.pl - like the Hammer of Thor - then you're not using it correctly.
+            </p>
+            <p>
+                In the next section we will learn how to get, execute, and run the script, as well as how to interpret the results and present your case in your own words, appropriately, using small snippets of output to highlight certain facts.
+            </p>
+            <p>
+                See also : <a href="#integrity">Integrity Checking</a>
+            </p>
             <div class="no-print">
                 <div class="backtop"><a href="#top">^ Back to top ^</a></div>
             </div>
         </section>
+        
+        <a id="integrity"></a>
+        <section class="integrity container">
+            <p style="page-break-before: always"></p>
+            <h2>Integrity Checking</h2>
+            <h4>
+                "Are you <strong>who</strong> you say you <em>are</em>?" said the blind woman <em>to the butcher</em>.
+            </h4>
+            <h2>
+                "Yes I <em>am</em>" said the murderer, <em>as he sharpened his knife</em>.
+            </h2>
+            <p>
+                It's easy to get taken in by impostors, and scripts are no different, esecially so with ones you run as root. Its even easier to forget that this "Enterprise Class" tuning script is nothing more than a hobbyists pet project, never forget that.
+            </p>
+            <p>
+                Best Practice is to check the code against either the md5sums or sha256sums (or both) before execution of the code.
+            </p>
+            <p>
+                There are a number of ways this can be acheived, the easiest and simplest method is to run 'md5sum' or 'sha256sum' against the script, and compare it with <a href="https://github.com/richardforth/apache2buddy" target="_blank">the published sums</a>.
+            </p>
+            <p class="codeblock">$ <strong>wget https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl</strong>
+...
+Saving to: ‘apache2buddy.pl’                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  apache2buddy.pl                        100%[=========================================================================>] 110.32K  --.-KB/s    in 0.1s                                                                                                                                                                                                                                                                                                                                                                                                          2020-04-01 22:28:25 (1.09 MB/s) - ‘apache2buddy.pl’ saved [112968/112968]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     $ ls
+apache2buddy.pl
+$ <strong>head -1 apache2buddy.pl</strong>
+#!/usr/bin/perl
+$ <strong>wget https://raw.githubusercontent.com/richardforth/apache2buddy/master/md5sums.txt</strong>
+...
+Saving to: ‘md5sums.txt’
+
+md5sums.txt                            100%[=========================================================================>]      50  --.-KB/s    in 0s
+
+2020-04-01 22:29:40 (1.46 MB/s) - ‘md5sums.txt’ saved [50/50]
+
+$ <strong>ls</strong>
+apache2buddy.pl  md5sums.txt
+$ <strong>cat md5sums.txt</strong>
+ffd0f9bc45fee77d523ff1661879a2ee  apache2buddy.pl
+$ <strong>md5sum apache2buddy.pl</strong>
+ffd0f9bc45fee77d523ff1661879a2ee  apache2buddy.pl
+$
+$
+$ wget https://raw.githubusercontent.com/richardforth/apache2buddy/master/sha256sums.txt
+...
+Saving to: ‘sha256sums.txt’
+
+sha256sums.txt                         100%[=========================================================================>]      82  --.-KB/s    in 0s
+
+2020-04-01 22:30:25 (2.43 MB/s) - ‘sha256sums.txt’ saved [82/82]
+
+$ <strong>ls</strong>
+apache2buddy.pl  md5sums.txt  sha256sums.txt
+$ <strong>cat sha256sums.txt</strong>
+d41361927d94a972c5bb2d02a3c53590ed453aff725ffc2c7e41b941d51aa5b8  apache2buddy.pl
+$ <strong>sha256sum apache2buddy.pl</strong>
+d41361927d94a972c5bb2d02a3c53590ed453aff725ffc2c7e41b941d51aa5b8  apache2buddy.pl
+$                                                                                                                                                                                                                                                                                      
+            </p>
+            <p class="figtext">
+                Running the checks manually, on a linux console (WSL) Notice how the strings match.
+            </p>
+            <p>Another, more elaborate and automated way, is to incorporate it into a wrapper script:</p>
+            <p class="codeblock">#!/bin/bash
+# example of testing md5sums prior to execution
+
+scriptmd5sum=`curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | md5sum | cut -d " " -f1`
+originmd5sum=`curl -s https://raw.githubusercontent.com/richardforth/apache2buddy/master/md5sums.txt | cut -d " " -f1`
+echo $scriptmd5sum
+echo $originmd5sum
+if [ $scriptmd5sum == $originmd5sum ]
+then
+        scriptsha256sum=`curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | sha256sum | cut -d " " -f1`
+        originsha256sum=`curl -s https://raw.githubusercontent.com/richardforth/apache2buddy/master/sha256sums.txt | cut -d " " -f1`
+        echo $scriptsha256sum
+        echo $originsha256sum
+        if [ $scriptsha256sum == $originsha256sum ]
+        then
+                # execute the code, its safe - we can assume
+                curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl
+        else
+                echo "Error: SHA256SUM mismatch, execution aborted."
+        fi
+else
+        echo "Error: MD5SUM mismatch, execution aborted."
+fi
+--- end a2bchk.sh ---
+            </p>
+            <p class="figtext">Fig 16a: An example shell script for integrity checking.</p>
+            <p>
+                If the md5sums or sha256sums do not match, then changes have been made and its untested, so do not proceed until they match.
+            </p>
+            <p>
+                As it goes without saying, please read and understand the code you are running on your sytem as root. If you are unsure, run it in a sandbox first.
+            </p>
+            <div class="no-print">
+                <div class="backtop"><a href="#top">^ Back to top ^</a></div>
+            </div>
+        </section>
+        
         <div class="clearscroll noprint"></div>
         <a id="walkthrough"></a>
         <section class="interpretation container">
@@ -566,7 +678,7 @@ Key:
             <h2>Walkthrough and interpretation of the results:<br><strong>an example scenario and execution run.</strong></h2>
             <p>In this section I walk you through an execution run of apache2buddy.pl, breaking down relevant sections and providing a commentary around it, what I check, how it checks, and any remedial action necessary. I will finish up with an example update to a customer using apache2buddy as my guide and reference point.</p>
             <p>Before we break it down, let's take a look as a full execution run output. We can then take some time to break each section down for discussion.</p>
-            <p class="codeblock skiptranslate">[root@web1 ~]# curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl
+            <p class="codeblock skiptranslate">[root@web1 ~]# <strong>curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl</strong>
 ############################################################
 apache2buddy.pl report for web1.example.com (xxx.xxx.xx.xxx)
 ############################################################
